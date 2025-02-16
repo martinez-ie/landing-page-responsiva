@@ -44,10 +44,10 @@
     font-family: 'Yusei Magic', sans-serif;
   }
   
-  /* ---------------------------------------------------------------------------
-     Menu Fixo
+ /* ---------------------------------------------------------------------------
+     Menu Fixo (Versão Atualizada)
   --------------------------------------------------------------------------- */
-  nav {
+nav {
     position: fixed;
     top: 0;
     width: 100%;
@@ -55,6 +55,9 @@
     padding: 1rem 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   nav ul {
@@ -73,11 +76,65 @@
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s;
+    padding: 8px 12px;
+    border-radius: 5px;
   }
   
   nav a:hover {
     color: var(--rosa-claro);
     transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Botão Hambúrguer (Novo) */
+  #menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--branco);
+    cursor: pointer;
+    padding: 0 1rem;
+  }
+  
+  /* Responsividade (Atualizado) */
+  @media (max-width: 768px) {
+    nav {
+      justify-content: space-between;
+      padding: 0.8rem 1rem;
+    }
+  
+    nav ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--rosa-principal);
+      flex-direction: column;
+      gap: 0;
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    nav ul li {
+      text-align: center;
+      padding: 0.8rem;
+    }
+  
+    nav a {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+    }
+  
+    #menu-toggle {
+      display: block;
+    }
+  
+    nav ul.ativo {
+      display: flex;
+    }
   }
   
   /* ---------------------------------------------------------------------------
@@ -394,27 +451,27 @@
     }
   }
   /* Botão de Voltar ao Topo */
-  #topoBtn {
-    position: fixed;
-    bottom: 30px;   /* Aumenta a distância da borda inferior */
-    right: 30px;    /* Aumenta a distância da borda direita */
-    width: 60px;    /* Define largura fixa */
-    height: 60px;   /* Define altura fixa */
-    line-height: 60px; /* Centraliza o conteúdo verticalmente */
-    text-align: center; /* Centraliza horizontalmente */
-    background: var(--rosa-principal);
-    color: var(--branco);
-    border: none;
-    border-radius: 50%;  /* Botão circular */
-    font-size: 1.5rem;   /* Tamanho de fonte maior */
-    cursor: pointer;
-    z-index: 1100;       /* Garante que fique sobre outros elementos */
-    transition: opacity 0.3s ease;
-    display: none;       /* Inicialmente escondido */
-  }
-  
-  #topoBtn:hover {
-    background: #ff9aa2;
-  }
-  
+#topoBtn {
+  position: fixed;
+  bottom: 30px;   /* Aumenta a distância da borda inferior */
+  right: 30px;    /* Aumenta a distância da borda direita */
+  width: 60px;    /* Define largura fixa */
+  height: 60px;   /* Define altura fixa */
+  line-height: 60px; /* Centraliza o conteúdo verticalmente */
+  text-align: center; /* Centraliza horizontalmente */
+  background: var(--rosa-principal);
+  color: var(--branco);
+  border: none;
+  border-radius: 50%;  /* Botão circular */
+  font-size: 1.5rem;   /* Tamanho de fonte maior */
+  cursor: pointer;
+  z-index: 1100;       /* Garante que fique sobre outros elementos */
+  transition: opacity 0.3s ease;
+  display: none;       /* Inicialmente escondido */
+}
+
+#topoBtn:hover {
+  background: #ff9aa2;
+}
+
   
