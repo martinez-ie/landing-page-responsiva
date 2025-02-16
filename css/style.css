@@ -1,23 +1,43 @@
-/* Reset e Configurações */
+/* Reset e Configurações Iniciais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+/* Classe para fonte Yusei Magic */
+.yusei-magic-regular {
+    font-family: "Yusei Magic", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Estilização básica do corpo da página */
+body {
+    font-family: 'Yusei Magic', sans-serif;
+    line-height: 1.6;
+    color: var(--cinza);
+    background: var(--branco);
+    padding-top: 90px;
+    max-width: 100%; /* Evita o excesso de largura */
+    overflow-x: hidden; /* Evita o scroll horizontal */
+}
+
+/* Títulos e parágrafos */
+h1 {
+    font-family: 'Yusei Magic', cursive;
+}
+
+p {
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+/* Variáveis de Cores */
 :root {
     --rosa-principal: #FFB6C1;
     --rosa-claro: #FFE4E1;
     --branco: #FFFFFF;
     --cinza: #4A4A4A;
-}
-
-body {
-    line-height: 1.6;
-    color: var(--cinza);
-    background: var(--branco);
-    padding-top: 90px;
 }
 
 /* Menu Fixo */
@@ -58,11 +78,8 @@ nav a:hover {
 header {
     text-align: center;
     padding: 1rem 0 3rem;
-}
-
-.header-content {
-    max-width: 600px;
-    margin: 0 auto;
+    z-index: 100;
+    position: relative;
 }
 
 header h1 {
@@ -76,12 +93,16 @@ header h1 {
 header h1::after {
     content: "";
     width: 50px;
-    height: 3px;
+    height: 4px;
     background: var(--rosa-principal);
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 10px;
     transform: translateX(-50%);
+}
+
+header p:first-of-type {
+    padding-top: 3.5rem;
 }
 
 header img {
@@ -98,7 +119,26 @@ header img:hover {
     transform: scale(1.05);
 }
 
-/* Seções */
+/* Ícones Sociais */
+.social-icons {
+    position: relative;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icons a {
+    color: var(--cinza);
+    font-size: 3rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--rosa-principal);
+}
+
+/* Seções Gerais */
 section {
     padding: 4rem 0;
     border-bottom: 1px solid var(--rosa-claro);
@@ -123,43 +163,180 @@ section h2::after {
     transform: translateX(-50%);
 }
 
-/* Grids */
-.grid-ferramentas,
+
 .grid-projetos {
     display: grid;
-    gap: 2rem;
-    margin: 2rem auto 0;
-    max-width: 1200px;
-    padding: 0 2rem;
-}
-
-.grid-ferramentas {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.grid-projetos {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-/* Cards */
-.ferramenta-card,
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+/* Cards de Projetos */
 .projeto-card {
-    background: var(--branco);
+    background: white;
+    border-radius: 15px;
     padding: 1.5rem;
-    border-radius: 10px;
-    border: 1px solid var(--rosa-claro);
-    transition: all 0.3s;
-    margin: 0 auto;
-    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #ffe4e1;
 }
 
-.ferramenta-card:hover,
 .projeto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(255,182,193,0.15);
 }
 
-/* Contato */
+.projeto-content h3 {
+    color: #4A4A4A;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.projeto-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.projeto-tags span {
+    background: #FFB6C1;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.projeto-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.github-btn, .demo-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.github-btn {
+    background: #4A4A4A;
+    color: white;
+}
+
+.github-btn:hover {
+    background: #333;
+}
+
+.demo-btn {
+    background: #FFB6C1;
+    color: white;
+}
+
+.demo-btn:hover {
+    background: #ff9aa2;
+}
+
+.ver-mais {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.ver-mais .github-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Container Flexível para alocar os elementos ao lado */
+.container-cases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Estilo específico para o 'case airbnb' */
+.case-airbnb {
+    flex: 1;
+    min-width: 300px; 
+    background: var(--rosa-claro);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do outro case */
+.outro-case {
+    flex: 1;
+    min-width: 300px; 
+    background: var(--branco);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .grid-projetos {
+      grid-template-columns: 1fr;
+      padding: 0 10px;
+    }
+  }
+/* Seção Ferramentas */
+#ferramentas {
+    padding: 4rem 1rem;
+    background: var(--rosa-claro);
+    text-align: center;
+}
+
+/* Linha de Ferramentas */
+.linha-ferramentas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem; 
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* Cada item de ferramenta */
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    min-width: 80px;
+    padding: 0.5rem;
+}
+
+/* Ícones com tamanho fixo (Font Awesome) */
+.tool-item i {
+    font-size: 3rem; 
+    color: var(--rosa-principal);
+    transition: all 0.3s ease;
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efeito de hover para ícones */
+.tool-item:hover i {
+    transform: scale(1.15);
+    color: var(--branco);
+    background: var(--rosa-principal);
+    border-radius: 10px;
+}
+
+/* Caso utilize imagem para ícones */
+.tool-icon {
+    width: 50px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Seção de Contato */
 .contato-content {
     text-align: center;
     max-width: 600px;
@@ -179,56 +356,28 @@ section h2::after {
     justify-content: center;
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    color: var(--cinza);
-    font-size: 2rem;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: var(--rosa-principal);
-}
-
 /* Rodapé */
 footer {
     background: var(--rosa-claro);
-    color: var(--cinza);
+    color: #FFFFFF;
     text-align: center;
     padding: 2rem;
     margin-top: 4rem;
 }
 
-/* Responsividade */
+/* Responsividade Geral */
 @media (max-width: 768px) {
     nav ul {
         gap: 1.5rem;
-        flex-wrap: wrap;
-        padding: 0 0.5rem;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    section {
-        padding: 3rem 0;
-    }
-
-    .grid-ferramentas,
-    .grid-projetos {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
     }
 
     header img {
         width: 200px;
         height: 200px;
+    }
+
+    .grid-projetos {
+        grid-template-columns: 1fr 1fr; /* Dois projetos por linha */
+        gap: 10px; /* Menos espaçamento entre os projetos */
     }
 }

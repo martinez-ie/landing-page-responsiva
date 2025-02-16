@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Definição do conjunto de caracteres e viewport para responsividade -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título da Página -->
   <title>Camylla Oliveira - Portfólio</title>
+  
+  <!-- Link para o arquivo CSS externo -->
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Importação de fontes do Google Fonts -->
   <style>
-    /* CSS incorporado para garantir funcionamento imediato */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Silkscreen:wght@400;700&family=Yusei+Magic&display=swap');
   </style>
+  
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Font-mfizz para outros ícones (se necessário) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
 </head>
 <body>
-  <!-- Menu Fixo -->
+  <!-- MENU FIXO -->
   <nav>
     <ul>
       <li><a href="#sobre">Sobre</a></li>
@@ -21,93 +33,303 @@
     </ul>
   </nav>
 
-  <!-- Conteúdo Principal -->
+  <!-- CONTEÚDO PRINCIPAL -->
   <div class="container">
-    <!-- Cabeçalho -->
+    <!-- CABEÇALHO (Seção "Sobre") -->
     <header id="sobre">
       <h1>Oi, eu sou Camylla Oliveira!</h1>
-      <img src="/img/camylla.jpg" alt="">
-      <p>Ei! Sou Camylla Oliveira, estudante de Engenharia de Software e Análise e desenvolvimento de Sistemas, apaixonada por transformar dados em insights e códigos em soluções práticas!</p>
+      <!-- Imagem com foto da Camylla -->
+      <img src="/img/camylla.jpg" alt="Foto da Camylla">
+      <p>Ei! Sou Camylla Oliveira, estudante de Engenharia de Software e Análise e Desenvolvimento de Sistemas, apaixonada por transformar dados em insights e códigos em soluções práticas!</p>
       <p>Com dois bootcamps concluídos, venho explorando: <strong>Análise de Dados</strong> e <strong>Desenvolvimento Web</strong>.</p>
       <p>Fora do código, sou mãe de 3 cachorros, amo café e dias chuvosos.</p>
       <p><em>Dados, código e café: minha jornada para aprender, criar e transformar ideias em soluções!</em></p>
-      
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     </header>
 
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/camylla-ops" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/camylla-ops" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/camylla.ops/" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
-      
-    <!-- Seções -->
-
+    <!-- SEÇÃO DE FERRAMENTAS -->
     <section id="ferramentas">
       <h2>Principais Ferramentas</h2>
-      <div class="grid-ferramentas">
-        <div class="ferramenta-card">
-          <h3>Linguagens</h3>
-          <p>SQL, Python</p>
+  
+      <!-- Linha 1 - Ferramentas de Dados -->
+      <div class="linha-ferramentas">
+        <div class="tool-item">
+          <i class="fas fa-database" title="SQL"></i>
         </div>
-        <div class="ferramenta-card">
-          <h3>Análise de Dados</h3>
-          <p>BigQuery, Pandas, PySpark</p>
+        <div class="tool-item">
+          <i class="fas fa-server" title="BigQuery"></i>
         </div>
-        <div class="ferramenta-card">
-          <h3>Visualização</h3>
-          <p>Looker Studio, Power BI</p>
+        <div class="tool-item">
+          <i class="fas fa-chart-bar" title="Power BI"></i>
         </div>
-        <div class="ferramenta-card">
-          <h3>Cloud</h3>
-          <p>Google Cloud Platform</p>
+        <div class="tool-item">
+          <i class="fab fa-python" title="Python"></i>
         </div>
-        <div class="ferramenta-card">
-          <h3>NoSQL</h3>
-          <p>MongoDB</p>
+        <div class="tool-item">
+          <i class="fas fa-cloud" title="GCP"></i>
         </div>
-        <div class="ferramenta-card">
-          <h3>Ferramentas</h3>
-          <p>Jupyter Notebook, Git</p>
+      </div>
+  
+      <!-- Linha 2 - Ferramentas Dev Web e Outras -->
+      <div class="linha-ferramentas">
+        <div class="tool-item">
+          <i class="fab fa-html5" title="HTML"></i>
+        </div>
+        <div class="tool-item">
+          <i class="fab fa-css3-alt" title="CSS"></i>
+        </div>
+        <div class="tool-item">
+          <i class="fab fa-js" title="JavaScript"></i>
+        </div>
+        <div class="tool-item">
+          <i class="fab fa-node" title="Node.js"></i>
+        </div>
+        <div class="tool-item">
+          <i class="fab fa-github" title="GitHub"></i>
+        </div>
+        <div class="tool-item">
+          <i class="fab fa-git-alt" title="Git"></i>
         </div>
       </div>
     </section>
-
-    <section id="projetos">
-      <h2>Projetos</h2>
-      <div class="grid-projetos">
-        <div class="projeto-card">
-          <h3>Dashboards</h3>
-          <p>Projetos de dashboards e análises exploratórias</p>
-        </div>
-        <div class="projeto-card">
-          <h3>Análise Exploratória</h3>
-          <p>Exploração detalhada de conjuntos de dados</p>
-        </div>
-        <div class="projeto-card">
-          <h3>GitHub</h3>
-          <p>Veja mais no meu <a href="https://github.com/camylla-ops" target="_blank">repositório</a></p>
+  
+<!-- SEÇÃO DE PROJETOS -->
+<section id="projetos">
+    <h2>Projetos Destacados</h2>
+    <div class="grid-projetos">
+      <!-- Projeto 1 - Decodificador -->
+      <div class="projeto-card">
+        <div class="projeto-content">
+          <h3>Decodificador de Texto</h3>
+          <div class="projeto-tags">
+            <span>Web Dev</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+          <p>Ferramenta de codificação/decodificação de texto.</p>
+          <div class="projeto-links">
+            <a href="https://github.com/camylla-ops/Challenge-ONE-L-gica-de-Programa-o-Decodificador-de-texto" target="_blank" class="github-btn">
+              <i class="fab fa-github"></i> Código
+            </a>
+            <a href="https://camylla-ops.github.io/Challenge-ONE-L-gica-de-Programa-o-Decodificador-de-texto/" target="_blank" class="demo-btn">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
         </div>
       </div>
-    </section>
-
+  
+      <!-- Projeto 2 - Análise de Acidentes -->
+      <div class="projeto-card">
+        <div class="projeto-content">
+          <h3>Análise de Acidentes Rodoviários</h3>
+          <div class="projeto-tags">
+            <span>Data Analysis</span>
+            <span>Python</span>
+          </div>
+          <p>Análise exploratória de dados de acidentes em rodovias federais brasileiras.</p>
+          <div class="projeto-links">
+            <a href="https://github.com/camylla-ops/Projeto-Analise-Acidentes-Rodovias-BR" target="_blank" class="github-btn">
+              <i class="fab fa-github"></i> Código
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Projeto 3 - Dashboard de Vendas -->
+      <div class="projeto-card">
+        <div class="projeto-content">
+          <h3>Dashboard de Vendas</h3>
+          <div class="projeto-tags">
+            <span>Data Viz</span>
+            <span>Power BI</span>
+          </div>
+          <p>Dashboard interativo de análise de vendas com Power BI.</p>
+          <div class="projeto-links">
+            <a href="https://github.com/camylla-ops/Dashboards" target="_blank" class="github-btn">
+              <i class="fab fa-github"></i> Relatório
+            </a>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiYTE3NjMyMDEtNGZjNi00OWNhLWJjNmItN2ZhNDYwMjc0YmVjIiwidCI6IjE5ZDk1YzVmLTkwOGMtNDdkYS05NTllLTdhMTk3ZjUyOGZmOSJ9" target="_blank" class="demo-btn">
+              <i class="fas fa-external-link-alt"></i> Dashboard
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Projeto 4 - Dicionário de Mulheres Negras -->
+      <div class="projeto-card">
+        <div class="projeto-content">
+          <h3>Dicionário de Mulheres Negras</h3>
+          <div class="projeto-tags">
+            <span>Web Dev</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <p>Site destacando contribuições de mulheres negras históricas.</p>
+          <div class="projeto-links">
+            <a href="https://github.com/camylla-ops/Dicionario-de-Mulheres-Negras" target="_blank" class="github-btn">
+              <i class="fab fa-github"></i> Código
+            </a>
+            <a href="https://camylla-ops.github.io/Mulheres-Incriveis-Na-Ciencia/" target="_blank" class="demo-btn">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Projeto 5 - Análise de Vendas de Supermercado -->
+      <div class="projeto-card">
+        <div class="projeto-content">
+          <h3>Análise de Dados de Vendas em SQL</h3>
+          <div class="projeto-tags">
+            <span>Data Analysis</span>
+            <span>PostgreSQL</span>
+          </div>
+          <p>Análise exploratória de dados de vendas de supermercado utilizando consultas SQL. Identificação de padrões de compra, preferências de clientes e insights estratégicos.</p>
+          <div class="projeto-links">
+            <a href="https://github.com/camylla-ops/Analise-de-Vendas-de-Supermercado-Insights-Atrav-s-do-PostgreSQL" target="_blank" class="github-btn">
+              <i class="fab fa-github"></i> Código
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Projeto 6 - Case Airbnb -->
+      <div class="projeto-card">
+        <div class="projeto-content">
+          <h3>Case Airbnb</h3>
+          <div class="projeto-tags">
+            <span>Data Analysis</span>
+            <span>Dashboards</span>
+            <span>Case Study</span>
+          </div>
+          <p>Estudo de caso utilizando dados do Airbnb para desenvolver insights e dashboards interativos.</p>
+          <div class="projeto-links">
+            <a href="https://github.com/camylla-ops/Projeto-3-Case-Airbnb" target="_blank" class="github-btn">
+              <i class="fab fa-github"></i> Código
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Projeto 7 - CRUD de Biblioteca -->
+      <div class="projeto-card">
+        <div class="projeto-content">
+          <h3>CRUD de Biblioteca</h3>
+          <div class="projeto-tags">
+            <span>Python</span>
+            <span>CRUD</span>
+          </div>
+          <p>Um sistema simples para gerenciar o acervo de uma biblioteca, com funcionalidades para adicionar, listar, atualizar e excluir livros.</p>
+          <div class="projeto-links">
+            <a href="https://github.com/camylla-ops/mini-projeto-crud-python-e-info-2024" target="_blank" class="github-btn">
+              <i class="fab fa-github"></i> Código
+            </a>
+          </div>
+        </div>
+      </div>
+       <!-- Projeto 8 - API de Livros -->
+    <div class="projeto-card">
+        <div class="projeto-content">
+        <h3>API de Livros</h3>
+        <div class="projeto-tags">
+            <span>Back-End</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+        </div>
+        <p>Uma API para gerenciar uma coleção de livros, com operações CRUD integradas ao MongoDB. Desenvolvida durante o curso "Eu Progr{amo}" da PrograMaria, focada no Back-End.</p>
+        <div class="projeto-links">
+            <a href="https://github.com/camylla-ops/API-livros" target="_blank" class="github-btn">
+            <i class="fab fa-github"></i> Código
+            </a>
+        </div>
+        </div>
+    </div>
+    </div>
+   
+  </section>
+  
+    <!-- SEÇÃO DE CONTATO -->
     <section id="contato">
       <h2>Fale comigo</h2>
       <div class="contato-content">
         <p>Será um prazer trabalhar com você!</p>
-        <ul>
-            <li><i class="fas fa-phone-alt"></i> (87) 98859-8026</li>
-            <li><i class="fas fa-envelope"></i> <a href="mailto:camylla.oliveiraps@gmail.com">camylla.oliveiraps@gmail.com</a></li>
+        <!-- Ícones Sociais -->
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/camylla-ops" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/camylla-ops" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/camylla.ops/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <!-- Informações de Contato -->
+        <ul class="contact-info">
+          <li><i class="fas fa-phone-alt"></i> (87) 98859-8026</li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:camylla.oliveiraps@gmail.com">camylla.oliveiraps@gmail.com</a></li>
         </ul>
-        
       </div>
     </section>
   </div>
 
-  <!-- Rodapé -->
+  <!-- RODAPÉ -->
   <footer>
-    <p>&copy; 2025 Camylla Oliveira. Todos os direitos reservados.</p>
+    <p>&copy; <span id="currentYear"></span> Camylla Oliveira. Todos os direitos reservados.</p>
   </footer>
+  
+  <!-- BOTÃO "VOLTAR AO TOPO" -->
+  <button id="topoBtn" title="Voltar ao topo">↑</button>
+ 
+
+
+  <!-- SCRIPTS JAVASCRIPT -->
+  <script>
+   
+    
+    // Implementa a rolagem suave para âncoras internas
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          const headerHeight = document.querySelector('nav').offsetHeight;
+          window.scrollTo({
+            top: target.offsetTop - headerHeight,
+            behavior: 'smooth'
+          });
+        });
+      });
+  
+
+    // Controle do botão "Voltar ao Topo"
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('topoBtn');
+      btn.style.display = window.scrollY > 500 ? 'block' : 'none';
+    });
+
+    document.getElementById('topoBtn').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Atualiza automaticamente o ano no rodapé
+    document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} Camylla Oliveira. Todos os direitos reservados.`;
+
+    // Animação de revelação ao scroll para os cards de ferramentas e projetos
+    window.addEventListener('scroll', revealOnScroll);
+    function revealOnScroll() {
+      document.querySelectorAll('.ferramenta-card, .projeto-card').forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < window.innerHeight - 100) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    }
+    // Inicializa a animação ao carregar a página
+    revealOnScroll();
+   
+
+  </script>
 </body>
 </html>
