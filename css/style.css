@@ -450,6 +450,7 @@ nav {
       padding: 0 10px;
     }
   }
+  
   /* Botão de Voltar ao Topo */
 #topoBtn {
   position: fixed;
@@ -473,5 +474,3 @@ nav {
 #topoBtn:hover {
   background: #ff9aa2;
 }
-
-  

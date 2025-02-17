@@ -1,44 +1,61 @@
+// Controle do Menu Mobile
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('ativo');
+    this.querySelector('i').classList.toggle('fa-times');
+});
+
 // Rolagem suave para âncoras internas
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      const headerHeight = document.querySelector('nav').offsetHeight;
-      window.scrollTo({
-        top: target.offsetTop - headerHeight,
-        behavior: 'smooth'
-      });
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        const headerHeight = document.querySelector('nav').offsetHeight;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
     });
-  });
-  
-  // Controle do botão "Voltar ao Topo"
-  window.addEventListener('scroll', () => {
-    const btn = document.getElementById('topoBtn');
-    btn.style.display = window.scrollY > 500 ? 'block' : 'none';
-  });
-  
-  document.getElementById('topoBtn').addEventListener('click', () => {
+});
+
+// Controle do botão "Voltar ao Topo"
+const topoBtn = document.getElementById('topoBtn');
+topoBtn.style.opacity = '0';
+topoBtn.style.transition = 'opacity 0.3s ease-in-out';
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        topoBtn.style.opacity = '1';
+        topoBtn.style.display = 'block';
+    } else {
+        topoBtn.style.opacity = '0';
+        setTimeout(() => {
+            if (window.scrollY <= 500) topoBtn.style.display = 'none';
+        }, 300);
+    }
+});
+
+topoBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-  
-  // Atualiza automaticamente o ano no rodapé
-  document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} Camylla Oliveira. Todos os direitos reservados.`;
-  
-  // Animação de revelação ao scroll para cards de ferramentas e projetos
-  window.addEventListener('scroll', revealOnScroll);
-  function revealOnScroll() {
-    document.querySelectorAll('.ferramenta-card, .projeto-card').forEach(element => {
-      const elementTop = element.getBoundingClientRect().top;
-      if (elementTop < window.innerHeight - 100) {
-        element.style.opacity = '1';
-        element.style.transform = 'translateY(0)';
-      }
+});
+
+// Atualização automática do ano
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Animação de revelação ao scroll
+window.addEventListener('scroll', revealOnScroll);
+
+function revealOnScroll() {
+    document.querySelectorAll('.tool-item, .projeto-card').forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < window.innerHeight - 100) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+            element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        }
     });
-  }
-  // Inicializa a animação ao carregar a página
-  revealOnScroll();
-  
-  document.getElementById('menu-toggle').addEventListener('click', function() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('ativo');
-  });
+}
+
+revealOnScroll();
