@@ -321,83 +321,44 @@ nav {
   }
   
   /* ---------------------------------------------------------------------------
-     Container de Cases e Cases
-  --------------------------------------------------------------------------- */
-  .container-cases {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-  
-  .case-airbnb,
-  .outro-case {
-    flex: 1;
-    min-width: 300px;
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .case-airbnb {
-    background: var(--rosa-claro);
-  }
-  
-  .outro-case {
-    background: var(--branco);
-  }
-  
-  /* ---------------------------------------------------------------------------
      Seção Ferramentas
-  --------------------------------------------------------------------------- */
-  #ferramentas {
-    padding: 4rem 1rem;
-    background: var(--rosa-claro);
-    text-align: center;
-  }
-  
+  /* CSS Atualizado */
+
   .linha-ferramentas {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 2rem auto;
-    max-width: 1200px;
+    gap: 25px;
+    margin: 30px auto;
+    max-width: 800px; /* Controla a largura máxima */
+    padding: 0 20px;
   }
-  
-  .tool-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-    min-width: 80px;
-    transition: all 0.3s ease;
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px; /* Largura fixa */
+}
+
+.tool-item span {
+  font-size: 0.9em;
+  margin-top: 8px;
+  text-align: center;
+  white-space: nowrap; /* Impede quebra de linha */
+}
+
+.tool-item i {
+  font-size: 2em;
+  color: #ff9aa2;
+}
+
+  /* Opcional: Efeito hover */
+  .tool-item:hover i,
+  .tool-item:hover span {
+    color: #e3d6df;
+    transition: color 0.3s ease;
   }
-  
-  .tool-item i {
-    font-size: 3rem;
-    width: 3rem;
-    height: 3rem;
-    color: var(--rosa-principal);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-  
-  .tool-item:hover i {
-    transform: scale(1.15);
-    color: var(--branco);
-    background: var(--rosa-principal);
-    border-radius: 10px;
-  }
-  
-  .tool-icon {
-    width: 50px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  
+
   /* ---------------------------------------------------------------------------
      Seção de Contato
   --------------------------------------------------------------------------- */
