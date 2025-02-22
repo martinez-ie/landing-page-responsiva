@@ -2,434 +2,522 @@
    Reset e Configurações Iniciais
 --------------------------------------------------------------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------------------------
+   Variáveis de Cores
+--------------------------------------------------------------------------- */
+:root {
+  --rosa-principal: #FFB6C1;
+  --rosa-claro:     #FFE4E1;
+  --branco:         #FFFFFF;
+  --cinza:          #4A4A4A;
+}
+
+/* ---------------------------------------------------------------------------
+   Tipografia
+--------------------------------------------------------------------------- */
+
+.yusei-magic-regular {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Estilo global para o corpo do site */
+body {
   
-  /* ---------------------------------------------------------------------------
-     Variáveis de Cores
-  --------------------------------------------------------------------------- */
-  :root {
-    --rosa-principal: #FFB6C1;
-    --rosa-claro:   #FFE4E1;
-    --branco:       #FFFFFF;
-    --cinza:        #4A4A4A;
-  }
-  
-  /* ---------------------------------------------------------------------------
-     Tipografia
-  --------------------------------------------------------------------------- */
-  .yusei-magic-regular {
-    font-family: "Yusei Magic", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  body {
-    font-family: 'Yusei Magic', sans-serif;
-    line-height: 1.6;
-    color: var(--cinza);
-    background: var(--branco);
-    padding-top: 90px;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  
-  h1 {
-    font-family: 'Yusei Magic', cursive;
-  }
-  
-  p {
-    font-family: 'Yusei Magic', sans-serif;
-  }
-  
- /* ---------------------------------------------------------------------------
-     Menu Fixo (Versão Atualizada)
-  --------------------------------------------------------------------------- */
+  font-family: 'Yusei Magic', sans-serif;
+  line-height: 1.6;
+  color: var(--cinza);
+  background: var(--branco);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Cabeçalhos e parágrafos */
+h1 {
+  font-family: 'Yusei Magic', cursive;
+}
+
+p {
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+/* ---------------------------------------------------------------------------
+   Menu Fixo (Versão Atualizada)
+--------------------------------------------------------------------------- */
 nav {
-    position: fixed;
-    top: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--rosa-principal);
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--branco);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: var(--rosa-claro);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botão Hambúrguer para dispositivos móveis */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--branco);
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Responsividade do Menu (até 768px)
+--------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
     background: var(--rosa-principal);
+    flex-direction: column;
+    gap: 0;
     padding: 1rem 0;
-    z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: var(--branco);
-    font-size: 1rem;
-    font-weight: 500;
-    transition: all 0.3s;
-    padding: 8px 12px;
-    border-radius: 5px;
-  }
-  
-  nav a:hover {
-    color: var(--rosa-claro);
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Botão Hambúrguer (Novo) */
-  #menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--branco);
-    cursor: pointer;
-    padding: 0 1rem;
-  }
-  
-  /* Responsividade (Atualizado) */
-  @media (max-width: 768px) {
-    nav {
-      justify-content: space-between;
-      padding: 0.8rem 1rem;
-    }
-  
-    nav ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: var(--rosa-principal);
-      flex-direction: column;
-      gap: 0;
-      padding: 1rem 0;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-  
-    nav ul li {
-      text-align: center;
-      padding: 0.8rem;
-    }
-  
-    nav a {
-      width: 80%;
-      margin: 0 auto;
-      display: block;
-    }
-  
-    #menu-toggle {
-      display: block;
-    }
-  
-    nav ul.ativo {
-      display: flex;
-    }
-  }
-  
-  /* ---------------------------------------------------------------------------
-     Cabeçalho
-  --------------------------------------------------------------------------- */
-  header {
+
+  nav ul li {
     text-align: center;
-    padding: 1rem 0 3rem;
-    position: relative;
-    z-index: 100;
+    padding: 0.8rem;
   }
-  
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    color: var(--cinza);
-    position: relative;
-    padding-bottom: 15px;
+
+  nav a {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
   }
-  
-  header h1::after {
-    content: "";
-    width: 50px;
-    height: 4px;
-    background: var(--rosa-principal);
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%);
+
+  #menu-toggle {
+    display: block;
   }
-  
-  header p:first-of-type {
-    padding-top: 3.5rem;
-  }
-  
-  header img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--rosa-principal);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  header img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* ---------------------------------------------------------------------------
-     Ícones Sociais
-  --------------------------------------------------------------------------- */
-  .social-icons {
-    position: relative;
-    top: 10px;
+
+  /* Classe 'ativo' faz o menu aparecer */
+  nav ul.ativo {
     display: flex;
-    justify-content: center;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Cabeçalho e Seção "Sobre"
+--------------------------------------------------------------------------- */
+header {
+  padding: 8rem 20px; /* Aumento do padding vertical */
+  max-width: 1200px;
+  margin: 0 auto 6rem; /* Margem inferior aumentada */
+}
+
+#sobre {
+  display: grid;
+  grid-template-columns: 400px 1fr; /* Coluna fixa para a imagem */
+  gap: 70px;
+  align-items: start;
+}
+
+header img {
+  width: 100%;
+  height: 400px; /* Altura definida para a imagem */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--rosa-principal);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Efeito Hover na Foto */
+header img:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.header-content {
+  padding-top: 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--cinza);
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Traço decorativo abaixo do título */
+header h1::after {
+  content: "";
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%);
+  bottom: -15px;
+  width: 120px;
+  height: 6px;
+  background: var(--rosa-principal);
+  border-radius: 3px;
+}
+
+.bio-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+/* Responsividade do Cabeçalho (até 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 4rem 20px;
+    margin-bottom: 4rem;
+  }
+
+  #sobre {
+    grid-template-columns: 1fr;
     gap: 30px;
   }
-  
-  .social-icons a {
-    color: var(--cinza);
-    font-size: 3rem;
-    transition: color 0.3s;
+
+  header img {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
   }
-  
-  .social-icons a:hover {
-    color: var(--rosa-principal);
-  }
-  
-  /* ---------------------------------------------------------------------------
-     Seções Gerais
-  --------------------------------------------------------------------------- */
-  section {
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--rosa-claro);
+
+  header h1 {
+    font-size: 2.2rem;
     text-align: center;
   }
-  
-  section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 0.5rem;
-  }
-  
-  section h2::after {
-    content: "";
-    width: 50px;
-    height: 3px;
-    background: var(--rosa-principal);
-    position: absolute;
+
+  header h1::after {
     left: 50%;
-    bottom: 0;
     transform: translateX(-50%);
   }
-  
-  /* ---------------------------------------------------------------------------
-     Grid de Projetos e Cards
-  --------------------------------------------------------------------------- */
-  .grid-projetos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
-  }
-  
-  .projeto-card {
-    background: var(--branco);
-    border: 1px solid #ffe4e1;
-    border-radius: 15px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .projeto-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .projeto-content h3 {
-    color: var(--cinza);
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-  }
-  
-  .projeto-tags {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .projeto-tags span {
-    background: var(--rosa-principal);
-    color: var(--branco);
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-  }
-  
-  .projeto-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .github-btn,
-  .demo-btn {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-  }
-  
-  .github-btn {
-    background: #4A4A4A;
-    color: var(--branco);
-  }
-  
-  .github-btn:hover {
-    background: #333;
-  }
-  
-  .demo-btn {
-    background: var(--rosa-principal);
-    color: var(--branco);
-  }
-  
-  .demo-btn:hover {
-    background: #ff9aa2;
-  }
-  
-  .ver-mais {
+
+  .bio-text {
     text-align: center;
-    margin-top: 3rem;
-  }
-  
-  .ver-mais .github-btn {
-    padding: 1rem 2rem;
     font-size: 1.1rem;
   }
-  
-  /* ---------------------------------------------------------------------------
-     Seção Ferramentas
-  /* CSS Atualizado */
+}
 
-  .linha-ferramentas {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin: 30px auto;
-    max-width: 800px; /* Controla a largura máxima */
-    padding: 0 20px;
-  }
+/* ---------------------------------------------------------------------------
+   Ícones Sociais
+--------------------------------------------------------------------------- */
+.social-icons {
+  position: relative;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  color: var(--cinza);
+  font-size: 3rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--rosa-principal);
+}
+
+/* ---------------------------------------------------------------------------
+   Seções Gerais
+--------------------------------------------------------------------------- */
+section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--rosa-claro);
+  text-align: center;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+section h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: var(--rosa-principal);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* ---------------------------------------------------------------------------
+   Seção Ferramentas
+--------------------------------------------------------------------------- */
+#ferramentas {
+
+  padding: 10rem 0; 
+  background-color: var(--rosa-claro);
+  text-align: center;
+}
+
+#ferramentas .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#ferramentas::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--rosa-claro);
+  margin-bottom: 1rem;
+}
+
+#ferramentas h2 {
+  font-size: 2rem; 
+  margin-bottom: 2.5rem;
+  color: #333; 
+}
+
+/* Ícones e Layout das Ferramentas */
+.linha-ferramentas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 0 30px;
+}
+
 .tool-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80px; /* Largura fixa */
+  width: 100px; 
 }
 
 .tool-item span {
-  font-size: 0.9em;
-  margin-top: 8px;
+  font-size: 1.2em; 
+  margin-top: 10px;
   text-align: center;
-  white-space: nowrap; /* Impede quebra de linha */
+  font-weight: bold;
 }
 
 .tool-item i {
-  font-size: 2em;
+  font-size: 3.5em; 
   color: #ff9aa2;
 }
 
-  /* Opcional: Efeito hover */
-  .tool-item:hover i,
-  .tool-item:hover span {
-    color: #e3d6df;
-    transition: color 0.3s ease;
+/* Hover nas Ferramentas */
+.tool-item:hover i,
+.tool-item:hover span {
+  color: #e3d6df;
+  transition: color 0.3s ease;
+}
+
+/* ---------------------------------------------------------------------------
+   Grid de Projetos e Cards
+--------------------------------------------------------------------------- */
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.projeto-card {
+  background: var(--branco);
+  border: 1px solid #ffe4e1;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+}
+
+.projeto-content h3 {
+  color: var(--cinza);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.projeto-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.projeto-tags span {
+  background: var(--rosa-principal);
+  color: var(--branco);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.projeto-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.github-btn,
+.demo-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.github-btn {
+  background: #4A4A4A;
+  color: var(--branco);
+}
+
+.github-btn:hover {
+  background: #333;
+}
+
+.demo-btn {
+  background: var(--rosa-principal);
+  color: var(--branco);
+}
+
+.demo-btn:hover {
+  background: #ff9aa2;
+}
+
+.ver-mais {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.ver-mais .github-btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Seção de Contato
+--------------------------------------------------------------------------- */
+.contato-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contato-content ul {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.contato-content li {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------------------------------
+   Rodapé
+--------------------------------------------------------------------------- */
+footer {
+  background: var(--rosa-claro);
+  color: var(--branco);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Media Queries (Telas até 768px)
+--------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1.5rem;
   }
 
-  /* ---------------------------------------------------------------------------
-     Seção de Contato
-  --------------------------------------------------------------------------- */
-  .contato-content {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+  header img {
+    width: 200px;
+    height: 200px;
   }
-  
-  .contato-content ul {
-    list-style: none;
-    margin-top: 1.5rem;
+
+  .grid-projetos {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 10px;
   }
-  
-  .contato-content li {
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-  
-  /* ---------------------------------------------------------------------------
-     Rodapé
-  --------------------------------------------------------------------------- */
-  footer {
-    background: var(--rosa-claro);
-    color: var(--branco);
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
-  }
-  
-  /* ---------------------------------------------------------------------------
-     Media Queries (Telas até 768px)
-  --------------------------------------------------------------------------- */
-  @media (max-width: 768px) {
-    nav ul {
-      gap: 1.5rem;
-    }
-  
-    header img {
-      width: 200px;
-      height: 200px;
-    }
-  
-    .grid-projetos {
-      grid-template-columns: 1fr;
-      gap: 10px;
-      padding: 0 10px;
-    }
-  }
-  
-  /* Botão de Voltar ao Topo */
+}
+
+/* ---------------------------------------------------------------------------
+   Botão de Voltar ao Topo
+--------------------------------------------------------------------------- */
 #topoBtn {
   position: fixed;
-  bottom: 30px;   /* Aumenta a distância da borda inferior */
-  right: 30px;    /* Aumenta a distância da borda direita */
-  width: 60px;    /* Define largura fixa */
-  height: 60px;   /* Define altura fixa */
-  line-height: 60px; /* Centraliza o conteúdo verticalmente */
-  text-align: center; /* Centraliza horizontalmente */
+  bottom: 30px;  
+  right: 30px;   
+  width: 60px;   
+  height: 60px;  
+  line-height: 60px;
+  text-align: center;
   background: var(--rosa-principal);
   color: var(--branco);
   border: none;
-  border-radius: 50%;  /* Botão circular */
-  font-size: 1.5rem;   /* Tamanho de fonte maior */
+  border-radius: 50%;
+  font-size: 1.5rem;
   cursor: pointer;
-  z-index: 1100;       /* Garante que fique sobre outros elementos */
+  z-index: 1100;
   transition: opacity 0.3s ease;
-  display: none;       /* Inicialmente escondido */
+  display: none; /* Inicialmente escondido */
 }
 
 #topoBtn:hover {

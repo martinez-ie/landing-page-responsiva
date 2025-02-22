@@ -9,16 +9,29 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        const headerHeight = document.querySelector('nav').offsetHeight;
-        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
         
+        // Seletor do destino
+        const target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+
+        // Altura real do menu
+        const headerHeight = document.querySelector('nav').offsetHeight;
+        
+        // Ajuste adicional (pode aumentar ou diminuir conforme seu layout)
+        const extraOffset = 90; 
+        // Se quiser incluir a margem/padding do header, pode colocar um valor maior
+        
+        // Calcula a posição exata para onde rolar
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - (headerHeight + extraOffset);
+
+        // Rolagem suave até o ponto calculado
         window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
         });
     });
 });
+
 
 // Controle do botão "Voltar ao Topo"
 const topoBtn = document.getElementById('topoBtn');
