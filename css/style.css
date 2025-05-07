@@ -371,9 +371,13 @@ section h2::after {
   background: var(--branco);
   border: 1px solid #ffe4e1;
   border-radius: 15px;
-  padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  height: 100%; 
+  flex-wrap: wrap; 
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  min-height: 40px; 
 }
 
 .projeto-card:hover {
@@ -388,8 +392,10 @@ section h2::after {
 
 .projeto-tags {
   display: flex;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.3rem;
   margin-bottom: 1rem;
+  align-items: flex-start;
 }
 
 .projeto-tags span {
@@ -398,6 +404,12 @@ section h2::after {
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
+  line-height: 1.4;
+  white-space: normal; /* Permite quebra de linha */
+  word-break: break-word; /* Quebra palavras longas */
+  max-width: 120px; /* Largura máxima por tag */
+  text-align: center;
+  flex-shrink: 1; /* Permite redução */
 }
 
 .projeto-links {
@@ -444,6 +456,28 @@ section h2::after {
   padding: 1rem 2rem;
   font-size: 1.1rem;
 }
+
+
+/* Adicione estas regras ao seu CSS existente */
+
+.projeto-card {
+  display: flex; /* Torna o card um container flex */
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  height: 100%; /* Garante que o card ocupe toda a altura disponível */
+}
+
+.projeto-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Preenche a altura total do card */
+  padding: 1.5rem; /* Mantém o padding existente */
+}
+
+.projeto-links {
+  margin-top: auto; /* Empurra os links para a parte inferior */
+  padding-top: 1rem; /* Espaçamento opcional acima dos botões */
+}
+
 
 /* ---------------------------------------------------------------------------
    Seção de Contato
