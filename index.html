@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ingrid Martinez - Portfólio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS movido para dentro do documento -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Silkscreen:wght@400;700&family=Yusei+Magic&display=swap');
 
@@ -147,6 +147,134 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
 </head>
 <body>
-  <!-- conteúdo permanece o mesmo -->
+  <!-- Aqui começa o conteúdo principal do site -->
+  <nav>
+    <!-- Botão para dispositivos móveis com aria-label para acessibilidade -->
+    <button id="menu-toggle" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul id="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#ferramentas">Ferramentas</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Cabeçalho - Seção "Sobre" -->
+    <header>
+      <div id="sobre">
+          <img src="img/ingrid-martinez.jpg" alt="Ingrid Martinez">
+          <div class="header-content">
+              <h1>Ingrid Martinez</h1>
+              <div class="bio-text">
+  <p>Profissional em transição de carreira com foco em Ciência de Dados, atualmente residindo na Irlanda. Tenho formação em Análise e Desenvolvimento de Sistemas, além de especializações em análise de dados, visualização e modelagem preditiva.</p>
+  <p>Atuei por mais de 10 anos em áreas comerciais e estratégicas em empresas como Gerdau, Unilever e Cobli, utilizando ferramentas como Power BI, SAP e SQL para tomada de decisão e melhoria de processos.</p>
+  <p><em>Paixão por resolver problemas com dados, comunicar insights com clareza e gerar valor para negócios por meio da tecnologia.</em></p>
+</div>
+          </div>
+      </div>
+    </header>
+
+    <!-- Seção de Ferramentas -->
+    <section id="ferramentas">
+      <h2>Principais Ferramentas</h2>
+      <div class="linha-ferramentas">
+        <div class="tool-item">
+          <i class="fas fa-database"></i>
+          <span>SQL</span>
+        </div>
+        <div class="tool-item">
+          <i class="fas fa-server"></i>
+          <span>BigQuery</span>
+        </div>
+        <div class="tool-item">
+          <i class="fas fa-chart-bar"></i>
+          <span>Power BI</span>
+        </div>
+        <div class="tool-item">
+          <i class="fab fa-python"></i>
+          <span>Python</span>
+        </div>
+        <div class="tool-item">
+          <i class="fas fa-cloud"></i>
+          <span>GCP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Projetos -->
+    <section id="projetos">
+      <h2>Projetos Destacados</h2>
+      <div class="grid-projetos">
+        <div class="projeto-card">
+          <div class="projeto-content">
+            <h3>Análise de Acidentes Rodoviários no Brasil</h3>
+            <div class="projeto-tags">
+              <span>Data Analysis</span>
+              <span>Python</span>
+              <span>Pandas</span>
+            </div>
+            <p>Análise exploratória de dados sobre acidentes em rodovias federais brasileiras, identificando padrões por estado, município, dia da semana, horário, clima e tipo de pista.</p>
+            <div class="projeto-links">
+              <a href="https://github.com/camylla-ops/Projeto-Analise-Acidentes-Rodovias-BR" target="_blank" class="github-btn">
+                <i class="fab fa-github"></i> Código
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Você pode adicionar mais cards aqui seguindo o mesmo padrão -->
+      </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato">
+      <h2>Fale comigo</h2>
+      <div class="contato-content">
+        <p>Será um prazer trabalhar com você!</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/camylla-ops" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/camylla-ops" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/camylla.ops/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <ul class="contact-info">
+          <li><i class="fas fa-phone-alt"></i> (87) 98859-8026</li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:camylla.oliveiraps@gmail.com">camylla.oliveiraps@gmail.com</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; <span id="currentYear"></span> Ingrid Martinez. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão "Voltar ao topo" -->
+    <button id="topoBtn" title="Voltar ao topo">↑</button>
+
+    <!-- Script para data dinâmica e botão de topo -->
+    <script>
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+      const btn = document.getElementById("topoBtn");
+      window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
 </body>
 </html>
