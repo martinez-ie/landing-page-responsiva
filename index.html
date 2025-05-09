@@ -2,279 +2,168 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ingrid Martinez - Portfólio</title>
-  <!-- CSS movido para dentro do documento -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingrid Martinez | Data Analyst & Business Strategist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Silkscreen:wght@400;700&family=Yusei+Magic&display=swap');
-
-    body {
+    * {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #F5F5DC;
-      color: #2F2F2F;
+      padding: 0;
+      box-sizing: border-box;
     }
-
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fdfdfd;
+      color: #1f1f1f;
+      line-height: 1.6;
+    }
     nav {
-      background-color: #A8D5BA;
-      padding: 1em;
+      background: #ffffff;
+      border-bottom: 1px solid #eaeaea;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1em;
-      padding: 0;
-      margin: 0;
+      gap: 1.5rem;
     }
-
     nav a {
-      color: #2F2F2F;
       text-decoration: none;
-      font-weight: bold;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.2s;
     }
-
+    nav a:hover {
+      color: #00856f;
+    }
     header {
-      background-color: #D2B48C;
-      padding: 2em;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       align-items: center;
-    }
-
-    header img {
-      width: 150px;
-      border-radius: 50%;
-      margin-right: 2em;
-    }
-
-    h1, h2, h3 {
-      color: #2F2F2F;
-    }
-
-    .bio-text em {
-      color: #4F4F4F;
-    }
-
-    .linha-ferramentas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-      padding: 2em;
-    }
-
-    .tool-item {
-      background-color: #E6E6DC;
-      padding: 1em;
-      border-radius: 6px;
-      flex: 1 1 150px;
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-      color: #2F2F2F;
-    }
-
-    .projeto-card {
-      background-color: #FFFFFF;
-      border: 1px solid #D2B48C;
-      border-radius: 8px;
-      padding: 1.5em;
-      margin: 1em 0;
-    }
-
-    .projeto-tags span {
-      background-color: #A8D5BA;
-      color: #2F2F2F;
-      padding: 0.2em 0.6em;
-      margin: 0.2em;
-      display: inline-block;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-
-    .projeto-links a {
-      display: inline-block;
-      background-color: #D2B48C;
-      color: #2F2F2F;
-      padding: 0.5em 1em;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-right: 0.5em;
-      margin-top: 1em;
-      font-weight: bold;
-    }
-
-    footer {
-      background-color: #A8D5BA;
-      color: #2F2F2F;
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 1em;
+      background: linear-gradient(145deg, #e0f7f4, #ffffff);
     }
-
+    header img {
+      width: 180px;
+      border-radius: 100px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      color: #1f1f1f;
+    }
+    header p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      color: #555;
+      margin-top: 1rem;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: #00856f;
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 0.5rem;
+    }
+    .tool-item, .projeto-card {
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .tool-item {
+      display: inline-block;
+      margin-right: 1rem;
+      font-weight: 600;
+    }
+    .projeto-tags span {
+      background: #d1f2eb;
+      color: #00856f;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+    }
+    footer {
+      background: #f8f8f8;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
     .social-icons a {
-      color: #2F2F2F;
-      margin-right: 1em;
-      font-size: 1.2em;
-    }
-
-    .contact-info {
-      list-style: none;
-      padding: 0;
-    }
-
-    .contact-info li {
-      margin: 0.5em 0;
-    }
-
-    #topoBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #A8D5BA;
-      color: #2F2F2F;
-      border: none;
-      padding: 0.7em;
-      border-radius: 50%;
-      font-size: 1.2em;
-      cursor: pointer;
-      display: none;
+      color: #00856f;
+      font-size: 1.4rem;
+      margin: 0 0.5rem;
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
 </head>
 <body>
-  <!-- Aqui começa o conteúdo principal do site -->
   <nav>
-    <!-- Botão para dispositivos móveis com aria-label para acessibilidade -->
-    <button id="menu-toggle" aria-label="Abrir menu">
-        <i class="fas fa-bars"></i>
-    </button>
-    <ul id="menu">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#ferramentas">Ferramentas</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
+    <strong>Ingrid Martinez</strong>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#ferramentas">Ferramentas</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
     </ul>
   </nav>
 
-  <div class="container">
-    <!-- Cabeçalho - Seção "Sobre" -->
-    <header>
-      <div id="sobre">
-          <img src="img/ingrid-martinez.jpg" alt="Ingrid Martinez">
-          <div class="header-content">
-              <h1>Ingrid Martinez</h1>
-              <div class="bio-text">
-  <p>Profissional em transição de carreira com foco em Ciência de Dados, atualmente residindo na Irlanda. Tenho formação em Análise e Desenvolvimento de Sistemas, além de especializações em análise de dados, visualização e modelagem preditiva.</p>
-  <p>Atuei por mais de 10 anos em áreas comerciais e estratégicas em empresas como Gerdau, Unilever e Cobli, utilizando ferramentas como Power BI, SAP e SQL para tomada de decisão e melhoria de processos.</p>
-  <p><em>Paixão por resolver problemas com dados, comunicar insights com clareza e gerar valor para negócios por meio da tecnologia.</em></p>
-</div>
-          </div>
+  <header>
+    <img src="img/ingrid-martinez.jpg" alt="Ingrid Martinez">
+    <h1>Ingrid Martinez</h1>
+    <p>Analista de Dados com background em Vendas Estratégicas. Transformo dados em decisões inteligentes por meio de storytelling, visualização e soluções analíticas com foco em impacto real.</p>
+  </header>
+
+  <section id="ferramentas">
+    <h2>Ferramentas e Tecnologias</h2>
+    <div class="tool-item">SQL</div>
+    <div class="tool-item">Power BI</div>
+    <div class="tool-item">Python</div>
+    <div class="tool-item">Excel</div>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos em Destaque</h2>
+    <div class="projeto-card">
+      <h3>Churn Prediction para Plataforma de Streaming</h3>
+      <div class="projeto-tags">
+        <span>Python</span><span>Machine Learning</span><span>Power BI</span>
       </div>
-    </header>
+      <p>Modelo preditivo para identificar usuários com maior propensão ao cancelamento. Visualizações interativas em Power BI facilitaram o uso de insights pelas áreas de retenção.</p>
+      <a href="https://github.com/camylla-ops/Projeto-Churn" target="_blank"><i class="fab fa-github"></i> Ver Código</a>
+    </div>
+    <!-- Adicione mais projetos aqui -->
+  </section>
 
-    <!-- Seção de Ferramentas -->
-    <section id="ferramentas">
-      <h2>Principais Ferramentas</h2>
-      <div class="linha-ferramentas">
-        <div class="tool-item">
-          <i class="fas fa-database"></i>
-          <span>SQL</span>
-        </div>
-        <div class="tool-item">
-          <i class="fas fa-server"></i>
-          <span>BigQuery</span>
-        </div>
-        <div class="tool-item">
-          <i class="fas fa-chart-bar"></i>
-          <span>Power BI</span>
-        </div>
-        <div class="tool-item">
-          <i class="fab fa-python"></i>
-          <span>Python</span>
-        </div>
-        <div class="tool-item">
-          <i class="fas fa-cloud"></i>
-          <span>GCP</span>
-        </div>
-      </div>
-    </section>
+  <section id="contato">
+    <h2>Fale Comigo</h2>
+    <p>Quer me chamar para um projeto, vaga ou colaboração?</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/ingridmartinezm/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/martinez-ie" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:ingrid-martinez@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
 
-    <!-- Seção de Projetos -->
-    <section id="projetos">
-      <h2>Projetos Destacados</h2>
-      <div class="grid-projetos">
-        <div class="projeto-card">
-          <div class="projeto-content">
-            <h3>Análise de Acidentes Rodoviários no Brasil</h3>
-            <div class="projeto-tags">
-              <span>Data Analysis</span>
-              <span>Python</span>
-              <span>Pandas</span>
-            </div>
-            <p>Análise exploratória de dados sobre acidentes em rodovias federais brasileiras, identificando padrões por estado, município, dia da semana, horário, clima e tipo de pista.</p>
-            <div class="projeto-links">
-              <a href="https://github.com/camylla-ops/Projeto-Analise-Acidentes-Rodovias-BR" target="_blank" class="github-btn">
-                <i class="fab fa-github"></i> Código
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Você pode adicionar mais cards aqui seguindo o mesmo padrão -->
-      </div>
-    </section>
-
-    <!-- Seção de Contato -->
-    <section id="contato">
-      <h2>Fale comigo</h2>
-      <div class="contato-content">
-        <p>Será um prazer trabalhar com você!</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/camylla-ops" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/camylla-ops" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.instagram.com/camylla.ops/" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-        <ul class="contact-info">
-          <li><i class="fas fa-phone-alt"></i> (87) 98859-8026</li>
-          <li><i class="fas fa-envelope"></i> <a href="mailto:camylla.oliveiraps@gmail.com">camylla.oliveiraps@gmail.com</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer>
-      <p>&copy; <span id="currentYear"></span> Ingrid Martinez. Todos os direitos reservados.</p>
-    </footer>
-
-    <!-- Botão "Voltar ao topo" -->
-    <button id="topoBtn" title="Voltar ao topo">↑</button>
-
-    <!-- Script para data dinâmica e botão de topo -->
-    <script>
-      document.getElementById("currentYear").textContent = new Date().getFullYear();
-
-      const btn = document.getElementById("topoBtn");
-      window.onscroll = function () {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-          btn.style.display = "block";
-        } else {
-          btn.style.display = "none";
-        }
-      };
-
-      btn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    </script>
+  <footer>
+    <p>&copy; 2025 Ingrid Martinez. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
