@@ -119,8 +119,8 @@
 <body>
   <nav>
     <strong>Ingrid Martinez</strong>
-    <ul>
-      <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#" onclick="toggleLanguage()">EN | PT</a></li>
+      $1
       <li><a href="#ferramentas">Ferramentas</a></li>
       <li><a href="#projetos">Projetos</a></li>
       <li><a href="#contato">Contato</a></li>
@@ -130,7 +130,7 @@
   <header>
     <img src="https://martinez-ie.github.io/ingridmartinez.github.io/ingrid-martinez.jpg" alt="Ingrid Martinez">
     <h1>Ingrid Martinez</h1>
-    <p>Profissional com 10 anos de experiência em Vendas e Atendimento, atualmente em transição para Ciência de Dados. Tenho atuado com Power BI, SQL, Python e Jupyter Notebook em projetos práticos que unem estratégia e tecnologia. Organizada com GitHub, Trello e Notion, busco constantemente aprender, encarar desafios e transformar dados em soluções reais e mensuráveis.</p>
+    <p>Professional with 10 years of experience in Sales and Customer Service, currently transitioning into Data Science. Living in Ireland to improve my English, I'm passionate about technology, gaming, and travel — and I believe data is a powerful tool for real-world transformation.</p>
   </header>
 
   <section id="ferramentas">
@@ -231,5 +231,11 @@
   <footer>
     <p>&copy; 2025 Ingrid Martinez. Todos os direitos reservados.</p>
   </footer>
+<script>
+  $1
+  document.querySelectorAll('.lang-toggle').forEach(el => {
+    el.textContent = isEnglish ? el.getAttribute('data-pt') : el.getAttribute('data-en');
+  });
+  }
 </body>
 </html>
