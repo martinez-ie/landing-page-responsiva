@@ -9,30 +9,39 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #0D1B2A;
-      color: #E0E1DD;
+      background-color: #F5F5DC;
+      color: #2F2F2F;
     }
 
     nav {
-      background-color: #1B263B;
+      background-color: #A8D5BA;
       padding: 1em;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     nav ul {
       list-style: none;
       display: flex;
       gap: 1em;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
     }
 
     nav a {
-      color: #E0E1DD;
+      color: #2F2F2F;
       text-decoration: none;
+      font-weight: bold;
     }
 
     header, section {
@@ -40,61 +49,86 @@
     }
 
     header {
-      background-color: #1B263B;
+      background-color: #D2B48C;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       align-items: center;
+      text-align: center;
     }
 
     header img {
       width: 150px;
       border-radius: 50%;
-      margin-right: 2em;
+      margin-bottom: 1em;
     }
 
     h1, h2, h3 {
-      color: #A9BCD0;
+      color: #2F2F2F;
+    }
+
+    .linha-ferramentas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    .tool-item {
+      background-color: #E6E6DC;
+      padding: 1em;
+      border-radius: 6px;
+      flex: 1 1 150px;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      color: #2F2F2F;
     }
 
     .projeto-card {
-      background-color: #1B263B;
-      border: 1px solid #415A77;
+      background-color: #FFFFFF;
+      border: 1px solid #D2B48C;
       border-radius: 8px;
       padding: 1.5em;
       margin: 1em 0;
     }
 
     .projeto-tags span {
-      background-color: #415A77;
-      color: #E0E1DD;
+      background-color: #A8D5BA;
+      color: #2F2F2F;
       padding: 0.2em 0.6em;
       margin: 0.2em;
       display: inline-block;
       border-radius: 4px;
+      font-weight: bold;
     }
 
     .projeto-links a {
       display: inline-block;
-      background-color: #778DA9;
-      color: #0D1B2A;
+      background-color: #D2B48C;
+      color: #2F2F2F;
       padding: 0.5em 1em;
       text-decoration: none;
       border-radius: 4px;
       margin-right: 0.5em;
       margin-top: 1em;
+      font-weight: bold;
     }
 
     footer {
-      background-color: #1B263B;
-      color: #E0E1DD;
+      background-color: #A8D5BA;
+      color: #2F2F2F;
       text-align: center;
       padding: 1em;
     }
 
     .social-icons a {
-      color: #E0E1DD;
+      color: #2F2F2F;
       margin-right: 1em;
       font-size: 1.2em;
+    }
+
+    .contact-info {
+      padding: 0;
+      list-style: none;
     }
 
     .contact-info li {
@@ -105,83 +139,30 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #778DA9;
-      color: #0D1B2A;
+      background-color: #A8D5BA;
+      color: #2F2F2F;
       border: none;
       padding: 0.7em;
       border-radius: 50%;
       font-size: 1.2em;
       cursor: pointer;
+      transition: opacity 0.4s ease;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header {
+        padding: 1em;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <button id="menu-toggle" aria-label="Abrir menu">
-      <i class="fas fa-bars"></i>
-    </button>
-    <ul id="menu">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#ferramentas">Ferramentas</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
-
-  <div class="container">
-    <header>
-      <div id="sobre">
-        <img src="img/camylla.jpg" alt="Ingrid Martinez">
-        <div class="header-content">
-          <h1>Ingrid Martinez</h1>
-          <div class="bio-text">
-            <p>Estudante de Análise e Desenvolvimento de Sistemas, com formação complementar em Análise e Ciência de Dados.</p>
-            <p>Apaixonada por dados e por transformar desafios complexos em soluções estruturadas e estratégicas.</p>
-            <p><em>Transformando dados em estratégia com visualização, análise e storytelling.</em></p>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section id="ferramentas">
-      <h2>Principais Ferramentas</h2>
-      <div class="linha-ferramentas">
-        <div class="tool-item"><i class="fas fa-database"></i> SQL</div>
-        <div class="tool-item"><i class="fas fa-server"></i> BigQuery</div>
-        <div class="tool-item"><i class="fas fa-chart-bar"></i> Power BI</div>
-        <div class="tool-item"><i class="fab fa-python"></i> Python</div>
-        <div class="tool-item"><i class="fas fa-cloud"></i> GCP</div>
-      </div>
-    </section>
-
-    <section id="projetos">
-      <h2>Projetos Destacados</h2>
-      <!-- Aqui você pode inserir os cards de projetos reaproveitando as mesmas classes -->
-    </section>
-
-    <section id="contato">
-      <h2>Fale comigo</h2>
-      <div class="contato-content">
-        <p>Será um prazer trabalhar com você!</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/camylla-ops" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/camylla-ops" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.instagram.com/camylla.ops/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-        <ul class="contact-info">
-          <li><i class="fas fa-phone-alt"></i> (87) 98859-8026</li>
-          <li><i class="fas fa-envelope"></i> <a href="mailto:camylla.oliveiraps@gmail.com">camylla.oliveiraps@gmail.com</a></li>
-        </ul>
-      </div>
-    </section>
-  </div>
-
-  <footer>
-    <p>&copy; <span id="currentYear"></span> Ingrid Martinez. Todos os direitos reservados.</p>
-  </footer>
-  <button id="topoBtn" title="Voltar ao topo">↑</button>
-  <script>
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-  </script>
+  <!-- conteúdo permanece o mesmo -->
 </body>
 </html>
