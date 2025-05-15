@@ -119,11 +119,16 @@
 <body>
   <nav>
     <strong>Ingrid Martinez</strong>
-    <li><a href="#" onclick="toggleLanguage()">EN | PT</a></li>
+    <li>
+  <a href="#" onclick="toggleLanguage()" style="font-weight: 600;">
+    <span class="flag" id="flag-en" style="font-size: 1.2rem;">🇬🇧</span> |
+    <span class="flag" id="flag-pt" style="font-size: 1.2rem;">🇧🇷</span>
+  </a>
+</li>
     <ul>
-      <li><a href="#ferramentas">Ferramentas</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
+      <li><a href="#ferramentas" class="lang-nav" data-pt="Ferramentas" data-en="Tools">Ferramentas</a></li>
+      <li><a href="#projetos" class="lang-nav" data-pt="Projetos" data-en="Projects">Projetos</a></li>
+      <li><a href="#contato" class="lang-nav" data-pt="Contato" data-en="Contact">Contato</a></li>
     </ul>
   </nav>
 
@@ -152,7 +157,7 @@
         <span>Python</span><span>Machine Learning</span><span>Power BI</span>
       </div>
       <p data-pt="Modelo preditivo para identificar usuários com maior propensão ao cancelamento. Visualizações interativas em Power BI facilitaram o uso de insights pelas áreas de retenção." data-en="Predictive model to identify users most likely to cancel. Interactive Power BI dashboards supported retention teams with actionable insights.">Modelo preditivo para identificar usuários com maior propensão ao cancelamento. Visualizações interativas em Power BI facilitaram o uso de insights pelas áreas de retenção.</p>
-      <a href="https://github.com/camylla-ops/Projeto-Churn" target="_blank"><i class="fab fa-github"></i> Ver Código</a>
+      <a href="$1" target="_blank" class="lang-btn" data-pt="Ver Código" data-en="View Code"><i class="fab fa-github"></i> Ver Código</a>
     </div>
     <div class="projeto-card">
       <h3 data-pt="Dashboard de Vendas Globais com Power BI" data-en="Global Sales Dashboard with Power BI">$1</h3>
@@ -260,6 +265,22 @@ function toggleLanguage() {
     const enDesc = el.getAttribute('data-en');
     if (ptDesc && enDesc) {
       el.textContent = isEnglish ? ptDesc : enDesc;
+    }
+  });
+
+  document.querySelectorAll('.lang-btn').forEach((el) => {
+    const ptText = el.getAttribute('data-pt');
+    const enText = el.getAttribute('data-en');
+    if (ptText && enText) {
+      el.innerHTML = `<i class='fab fa-github'></i> ${isEnglish ? ptText : enText}`;
+    }
+  });
+
+  document.querySelectorAll('.lang-nav').forEach((el) => {
+    const ptNav = el.getAttribute('data-pt');
+    const enNav = el.getAttribute('data-en');
+    if (ptNav && enNav) {
+      el.textContent = isEnglish ? ptNav : enNav;
     }
   });
 }
