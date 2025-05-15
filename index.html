@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingrid Martinez | Data Analyst & Business Strategist</title>
+  <title>Ingrid Martinez | Data Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -14,223 +14,168 @@
     }
     body {
       font-family: 'IBM Plex Sans', sans-serif;
-      background-color: #f5f9ff;
-      color: #1e1e1e;
+      background-color: #f7fafd;
+      color: #1f1f1f;
       line-height: 1.6;
     }
     nav {
-      background: #ffffff;
-      border-bottom: 1px solid #d1e3f0;
+      background-color: #ffffff;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      z-index: 10;
     }
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
     }
     nav a {
       text-decoration: none;
-      color: #1e1e1e;
+      color: #1f1f1f;
       font-weight: 600;
-      transition: color 0.2s ease;
     }
     nav a:hover {
-      color: #005bb5;
+      color: #0073e6;
     }
     header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2.5rem 1.5rem;
       text-align: center;
-      background: linear-gradient(135deg, #dceeff, #f5f9ff);
+      padding: 3rem 1rem 2rem;
     }
     header img {
-      width: 200px;
-      border-radius: 16px;
-      border: 5px solid #ffffff;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s ease;
-    }
-    header img:hover {
-      transform: scale(1.05);
+      width: 160px;
+      border-radius: 12px;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     header h1 {
       font-size: 2rem;
-      color: #1e1e1e;
-    }
-    header p {
-      max-width: 600px;
-      font-size: 1rem;
-      color: #4d4d4d;
       margin-top: 1rem;
     }
+    header p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0.8rem auto;
+      color: #444;
+    }
     section {
-      padding: 3rem 2rem;
-      max-width: 1080px;
+      max-width: 960px;
       margin: auto;
+      padding: 2rem 1.5rem;
     }
     h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
       color: #005bb5;
-      border-bottom: 2px solid #d1e3f0;
-      padding-bottom: 0.5rem;
     }
-    .tool-item, .projeto-card {
-      background: #ffffff;
-      border: 1px solid #e1e8f0;
-      border-radius: 12px;
-      padding: 1.8rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    .toolset {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
     .tool-item {
-      display: inline-flex;
-      align-items: center;
-      font-weight: 600;
-      gap: 0.5rem;
-      font-size: 1rem;
-      background: #eef6ff;
+      background: #e5f1ff;
       color: #005bb5;
-      border: none;
-      padding: 0.75rem 1.25rem;
+      font-weight: 600;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+    .projeto-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    .projeto-card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .projeto-tags {
+      margin: 0.5rem 0;
     }
     .projeto-tags span {
-      background: #e6f0fa;
+      display: inline-block;
+      background: #eaf4ff;
       color: #005bb5;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.7rem;
       margin-right: 0.5rem;
+      border-radius: 5px;
     }
     .projeto-card h3 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       margin-bottom: 0.5rem;
     }
     .projeto-card p {
+      font-size: 0.95rem;
       color: #444;
-      margin-top: 0.8rem;
     }
     .projeto-card a {
       display: inline-block;
       margin-top: 1rem;
-      background-color: #005bb5;
-      color: white;
       padding: 0.5rem 1rem;
+      background-color: #005bb5;
+      color: #fff;
       border-radius: 5px;
       text-decoration: none;
-      transition: background 0.2s;
-    }
-    .projeto-card a:hover {
-      background-color: #003f87;
-    }
-    .social-icons a {
-      color: #005bb5;
-      font-size: 1.4rem;
-      margin: 0 0.6rem;
-      transition: color 0.2s ease;
-    }
-    .social-icons a:hover {
-      color: #002f5f;
     }
     footer {
-      background: #f0f4f9;
       text-align: center;
-      padding: 2rem;
       font-size: 0.9rem;
+      padding: 2rem;
       color: #555;
-      border-top: 1px solid #d1e3f0;
+      background: #f0f4f9;
     }
   </style>
 </head>
 <body>
   <nav>
     <strong>Ingrid Martinez</strong>
-    <li>
-  <a href="#" onclick="toggleLanguage()" style="font-weight: 600;">
-    <span class="flag" id="flag-en" style="font-size: 1.2rem;">🇬🇧</span> |
-    <span class="flag" id="flag-pt" style="font-size: 1.2rem;">🇧🇷</span>
-  </a>
-</li>
     <ul>
-      <li><a href="#ferramentas" class="lang-nav" data-pt="Ferramentas" data-en="Tools">Ferramentas</a></li>
-      <li><a href="#projetos" class="lang-nav" data-pt="Projetos" data-en="Projects">Projetos</a></li>
-      <li><a href="#contato" class="lang-nav" data-pt="Contato" data-en="Contact">Contato</a></li>
+      <li><a href="#ferramentas">Ferramentas</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
     </ul>
   </nav>
 
   <header>
     <img src="https://martinez-ie.github.io/ingridmartinez.github.io/ingrid-martinez.jpg" alt="Ingrid Martinez">
     <h1>Ingrid Martinez</h1>
-    <p>Professional with 10 years of experience in Sales and Customer Service, now transitioning into Data Science. Currently living in Ireland to improve my English, I'm passionate about technology, gaming, and meaningful travel — and I believe data is a powerful tool to create real-world solutions.</p>
+    <p>Profissional com 10 anos de experiência em Vendas e Atendimento, em transição para Ciência de Dados. Atualmente moro na Irlanda para aprimorar o inglês. Apaixonada por tecnologia, jogos e boas viagens — acredito que os dados são ferramentas poderosas para gerar soluções reais.</p>
   </header>
 
   <section id="ferramentas">
-  <h2>Ferramentas e Tecnologias</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding-top: 1rem;">
-    <div class="tool-item"><i class="fas fa-database"></i> SQL</div>
-    <div class="tool-item"><i class="fas fa-chart-bar"></i> Power BI</div>
-    <div class="tool-item"><i class="fab fa-python"></i> Python</div>
-    <div class="tool-item"><i class="fas fa-file-excel"></i> Excel</div>
-  </div>
-  </div>
-</section>
-
-<section id="projetos">
-  <h2>Projetos em Destaque</h2>
-  <div class="grid-projetos">
-    <div class="projeto-card">
-  <img src="https://raw.githubusercontent.com/martinez-ie/python_previsaoChurn/main/imagens/churn_banner.png" alt="Churn Project Banner" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-  <h3 data-pt="Previsão de Churn com Machine Learning" data-en="Churn Prediction with Machine Learning">Previsão de Churn com Machine Learning</h3>
-  <div class="projeto-tags">
-    <span>Python</span>
-    <span>Pandas</span>
-    <span>Scikit-learn</span>
-    <span>Jupyter</span>
-  </div>
-  
-  <a href="https://github.com/martinez-ie/python_previsaoChurn" target="_blank" class="lang-btn" data-pt="Ver Código" data-en="View Code"><i class="fab fa-github"></i> Ver Código</a>
-</div>
-  <p data-pt="Projeto de machine learning para prever cancelamento de clientes de uma plataforma de streaming com base em comportamento e dados demográficos." data-en="Machine learning project to predict customer churn on a streaming platform using behavioral and demographic data.">Projeto de machine learning para prever cancelamento de clientes de uma plataforma de streaming com base em comportamento e dados demográficos.</p>
-  <a href="https://github.com/martinez-ie/python_previsaoChurn" target="_blank" class="lang-btn" data-pt="Ver Código" data-en="View Code"><i class="fab fa-github"></i> Ver Código</a>
-</div>
-  <p data-pt="Projeto de machine learning para prever cancelamento de clientes de uma plataforma de streaming com base em comportamento e dados demográficos." data-en="Machine learning project to predict customer churn on a streaming platform using behavioral and demographic data.">Projeto de machine learning para prever cancelamento de clientes de uma plataforma de streaming com base em comportamento e dados demográficos.</p>
-  
-</div>
-      
-      
+    <h2>Ferramentas e Tecnologias</h2>
+    <div class="toolset">
+      <div class="tool-item">Python</div>
+      <div class="tool-item">SQL</div>
+      <div class="tool-item">Power BI</div>
+      <div class="tool-item">Excel</div>
+      <div class="tool-item">Jupyter Notebook</div>
     </div>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos em Destaque</h2>
 
     <div class="projeto-card">
-      <h3 data-pt="Dashboard de Vendas Globais" data-en="Global Sales Dashboard">Dashboard de Vendas Globais</h3>
+      <img src="https://chat.openai.com/mnt/data/churn_banner_web.png" alt="Churn Prediction">
+      <h3>Previsão de Churn com Machine Learning</h3>
       <div class="projeto-tags">
-        <span>Power BI</span>
-        <span>Excel</span>
-        <span>Data Viz</span>
+        <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Jupyter</span>
       </div>
-      <p data-pt="Visualização interativa com filtros por região e desempenho comercial." data-en="Interactive dashboard with filters by region and commercial performance.">Visualização interativa com filtros por região e desempenho comercial.</p>
-      <a href="#" class="lang-btn" data-pt="Ver Código" data-en="View Code"><i class="fab fa-github"></i> Ver Código</a>
+      <p>Projeto de machine learning para prever cancelamento de clientes de uma plataforma de streaming com base em comportamento e dados demográficos.</p>
+      <a href="https://github.com/martinez-ie/python_previsaoChurn" target="_blank">Ver Código</a>
     </div>
-  </div>
-</section>
 
-<style>
-  .grid-projetos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-</style>
+  </section>
 
   <section id="contato">
     <h2>Fale Comigo</h2>
@@ -245,54 +190,5 @@
   <footer>
     <p>&copy; 2025 Ingrid Martinez. Todos os direitos reservados.</p>
   </footer>
-<script>
-function toggleLanguage() {
-  const en = "Professional with 10 years of experience in Sales and Customer Service, now transitioning into Data Science. Currently living in Ireland to improve my English, I'm passionate about technology, gaming, and meaningful travel — and I believe data is a powerful tool to create real-world solutions.";
-  const pt = "Profissional com 10 anos de experiência em Vendas e Atendimento, em transição para Ciência de Dados. Atualmente moro na Irlanda para aprimorar o inglês. Apaixonada por tecnologia, jogos e boas viagens — acredito que os dados são ferramentas poderosas para gerar soluções reais.";
-
-  const isEnglish = document.querySelector("header p").textContent === en;
-
-  document.querySelector("header p").textContent = isEnglish ? pt : en;
-  document.querySelector("#ferramentas h2").textContent = isEnglish ? "Ferramentas e Tecnologias" : "Tools & Technologies";
-  document.querySelector("#projetos h2").textContent = isEnglish ? "Projetos em Destaque" : "Highlighted Projects";
-  document.querySelector("#contato h2").textContent = isEnglish ? "Fale Comigo" : "Get in Touch";
-  document.querySelector("#contato p").textContent = isEnglish
-    ? "Quer me chamar para um projeto, vaga ou colaboração?"
-    : "Looking to hire, collaborate, or connect on a project?";
-
-  // Alternar títulos e descrições dos projetos
-  document.querySelectorAll('.projeto-card h3').forEach((el) => {
-    const ptTitle = el.getAttribute('data-pt');
-    const enTitle = el.getAttribute('data-en');
-    if (ptTitle && enTitle) {
-      el.textContent = isEnglish ? ptTitle : enTitle;
-    }
-    });
-
-  document.querySelectorAll('.projeto-card p').forEach((el) => {
-    const ptDesc = el.getAttribute('data-pt');
-    const enDesc = el.getAttribute('data-en');
-    if (ptDesc && enDesc) {
-      el.textContent = isEnglish ? ptDesc : enDesc;
-    }
-  });
-
-  document.querySelectorAll('.lang-btn').forEach((el) => {
-    const ptText = el.getAttribute('data-pt');
-    const enText = el.getAttribute('data-en');
-    if (ptText && enText) {
-      el.innerHTML = `<i class='fab fa-github'></i> ${isEnglish ? ptText : enText}`;
-    }
-  });
-
-  document.querySelectorAll('.lang-nav').forEach((el) => {
-    const ptNav = el.getAttribute('data-pt');
-    const enNav = el.getAttribute('data-en');
-    if (ptNav && enNav) {
-      el.textContent = isEnglish ? ptNav : enNav;
-    }
-  });
-}
-</script>
 </body>
 </html>
