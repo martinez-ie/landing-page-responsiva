@@ -14,13 +14,13 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #fdfdfd;
-      color: #1f1f1f;
+      background-color: #f5f9ff;
+      color: #1e1e1e;
       line-height: 1.6;
     }
     nav {
       background: #ffffff;
-      border-bottom: 1px solid #eaeaea;
+      border-bottom: 1px solid #d1e3f0;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -28,6 +28,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
     }
     nav ul {
       list-style: none;
@@ -36,12 +37,12 @@
     }
     nav a {
       text-decoration: none;
-      color: #333;
+      color: #1e1e1e;
       font-weight: 600;
-      transition: color 0.2s;
+      transition: color 0.2s ease;
     }
     nav a:hover {
-      color: #00856f;
+      color: #005bb5;
     }
     header {
       display: flex;
@@ -49,70 +50,105 @@
       align-items: center;
       padding: 4rem 2rem;
       text-align: center;
-      background: linear-gradient(145deg, #e0f7f4, #ffffff);
+      background: linear-gradient(135deg, #dceeff, #f5f9ff);
     }
     header img {
-      width: 180px;
-      border-radius: 12px;
-      border: 4px solid #ffffff;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      width: 200px;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
       margin-bottom: 1.5rem;
       transition: transform 0.3s ease;
     }
+    header img:hover {
+      transform: scale(1.05);
+    }
     header h1 {
-      font-size: 2.2rem;
-      color: #1f1f1f;
+      font-size: 2.5rem;
+      color: #1e1e1e;
     }
     header p {
-      max-width: 600px;
-      font-size: 1.1rem;
-      color: #555;
+      max-width: 680px;
+      font-size: 1.15rem;
+      color: #4d4d4d;
       margin-top: 1rem;
     }
     section {
       padding: 4rem 2rem;
-      max-width: 1000px;
+      max-width: 1080px;
       margin: auto;
     }
     h2 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 2rem;
-      color: #00856f;
-      border-bottom: 2px solid #eaeaea;
+      color: #005bb5;
+      border-bottom: 2px solid #d1e3f0;
       padding-bottom: 0.5rem;
     }
     .tool-item, .projeto-card {
       background: #ffffff;
-      border: 1px solid #eaeaea;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border: 1px solid #e1e8f0;
+      border-radius: 12px;
+      padding: 1.8rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.04);
     }
     .tool-item {
-      display: inline-block;
-      margin-right: 1rem;
+      display: inline-flex;
+      align-items: center;
       font-weight: 600;
+      gap: 0.5rem;
+      font-size: 1rem;
+      background: #eef6ff;
+      color: #005bb5;
+      border: none;
+      padding: 0.75rem 1.25rem;
     }
     .projeto-tags span {
-      background: #d1f2eb;
-      color: #00856f;
-      padding: 0.3rem 0.7rem;
-      border-radius: 5px;
+      background: #e6f0fa;
+      color: #005bb5;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
       font-size: 0.9rem;
       margin-right: 0.5rem;
     }
+    .projeto-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .projeto-card p {
+      color: #444;
+      margin-top: 0.8rem;
+    }
+    .projeto-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #005bb5;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .projeto-card a:hover {
+      background-color: #003f87;
+    }
+    .social-icons a {
+      color: #005bb5;
+      font-size: 1.4rem;
+      margin: 0 0.6rem;
+      transition: color 0.2s ease;
+    }
+    .social-icons a:hover {
+      color: #002f5f;
+    }
     footer {
-      background: #f8f8f8;
+      background: #f0f4f9;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #777;
-    }
-    .social-icons a {
-      color: #00856f;
-      font-size: 1.4rem;
-      margin: 0 0.5rem;
+      color: #555;
+      border-top: 1px solid #d1e3f0;
     }
   </style>
 </head>
@@ -152,7 +188,7 @@
 <section id="projetos">
     <h2>Projetos em Destaque</h2>
     <div class="projeto-card">
-      <h3 data-pt="Churn Prediction para Plataforma de Streaming" data-en="Churn Prediction for Streaming Platform">$1</h3>
+      <h3 data-pt="Churn Prediction para Plataforma de Streaming" data-en="Churn Prediction for Streaming Platform">Churn Prediction para Plataforma de Streaming</h3>
       <div class="projeto-tags">
         <span>Python</span><span>Machine Learning</span><span>Power BI</span>
       </div>
@@ -160,7 +196,7 @@
       <a href="$1" target="_blank" class="lang-btn" data-pt="Ver Código" data-en="View Code"><i class="fab fa-github"></i> Ver Código</a>
     </div>
     <div class="projeto-card">
-      <h3 data-pt="Dashboard de Vendas Globais com Power BI" data-en="Global Sales Dashboard with Power BI">$1</h3>
+      <h3 data-pt="Dashboard de Vendas Globais com Power BI" data-en="Global Sales Dashboard with Power BI">Dashboard de Vendas Globais com Power BI</h3>
       <div class="projeto-tags">
         <span>Power BI</span><span>Data Viz</span>
       </div>
@@ -169,7 +205,7 @@
     </div>
 
     <div class="projeto-card">
-      <h3 data-pt="Análise de Acidentes Rodoviários no Brasil" data-en="Road Accident Analysis in Brazil">$1</h3>
+      <h3 data-pt="Análise de Acidentes Rodoviários no Brasil" data-en="Road Accident Analysis in Brazil">Análise de Acidentes Rodoviários no Brasil</h3>
       <div class="projeto-tags">
         <span>Python</span><span>Pandas</span><span>Exploração de Dados</span>
       </div>
@@ -178,7 +214,7 @@
     </div>
 
     <div class="projeto-card">
-      <h3 data-pt="Análise de Vendas em Supermercado (Myanmar)" data-en="Supermarket Sales Analysis (Myanmar)">$1</h3>
+      <h3 data-pt="Análise de Vendas em Supermercado (Myanmar)" data-en="Supermarket Sales Analysis (Myanmar)">Análise de Vendas em Supermercado (Myanmar)</h3>
       <div class="projeto-tags">
         <span>SQL</span><span>PostgreSQL</span>
       </div>
@@ -187,7 +223,7 @@
     </div>
 
     <div class="projeto-card">
-      <h3 data-pt="Estudo de Caso Airbnb Europa" data-en="Airbnb Market Study - Europe">$1</h3>
+      <h3 data-pt="Estudo de Caso Airbnb Europa" data-en="Airbnb Market Study - Europe">Estudo de Caso Airbnb Europa</h3>
       <div class="projeto-tags">
         <span>Python</span><span>SWOT</span>
       </div>
@@ -196,7 +232,7 @@
     </div>
 
     <div class="projeto-card">
-      <h3 data-pt="Hackathon Corp Solutions - Diversidade" data-en="Hackathon Corp Solutions - Diversity">$1</h3>
+      <h3 data-pt="Hackathon Corp Solutions - Diversidade" data-en="Hackathon Corp Solutions - Diversity">Hackathon Corp Solutions - Diversidade</h3>
       <div class="projeto-tags">
         <span>Python</span><span>Power BI</span><span>1º Lugar</span>
       </div>
@@ -205,7 +241,7 @@
     </div>
 
     <div class="projeto-card">
-      <h3 data-pt="Dashboard Vendas, Custo, Margem e KPIs" data-en="Sales, Cost, Margin & KPI Dashboard">$1</h3>
+      <h3 data-pt="Dashboard Vendas, Custo, Margem e KPIs" data-en="Sales, Cost, Margin & KPI Dashboard">Dashboard Vendas, Custo, Margem e KPIs</h3>
       <div class="projeto-tags">
         <span>Power BI</span><span>Data Viz</span>
       </div>
@@ -214,7 +250,7 @@
     </div>
 
     <div class="projeto-card">
-      <h3 data-pt="Gerador Sintético de Dados para E-commerce" data-en="Synthetic Data Generator for E-commerce">$1</h3>
+      <h3 data-pt="Gerador Sintético de Dados para E-commerce" data-en="Synthetic Data Generator for E-commerce">Gerador Sintético de Dados para E-commerce</h3>
       <div class="projeto-tags">
         <span>Python</span><span>Faker</span><span>Pandas</span>
       </div>
@@ -287,3 +323,4 @@ function toggleLanguage() {
 </script>
 </body>
 </html>
+
