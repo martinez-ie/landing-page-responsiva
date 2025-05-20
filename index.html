@@ -136,7 +136,12 @@
       color: #555;
       background: #f0f4f9;
     }
-  </style>
+      .projetos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+</style>
 </head>
 <body>
   <nav>
@@ -166,7 +171,8 @@
   </section>
 
   <section id="projetos">
-    <h2>Projetos em Destaque</h2>
+  <h2>Projetos em Destaque</h2>
+  <div class="projetos-grid">
 
     <div class="projeto-card">
       <img src="https://martinez-ie.github.io/ingridmartinez.github.io/churn_banner_web.png" alt="Churn Prediction">
@@ -196,9 +202,9 @@
       <p>Projeto de análise preditiva usando regressão linear para estimar valores com base em variáveis explicativas. Inclui pré-processamento, treinamento e avaliação do modelo.</p>
       <a href="https://github.com/martinez-ie/modelo_regressao" target="_blank">Ver Código</a>
     </div>
-  </section>
-
-  <section id="contato">
+    </div>
+</section>
+<section id="contato">
     <h2>Fale Comigo</h2>
     <p>Quer me chamar para um projeto, vaga ou colaboração?</p>
     <div class="social-icons">
