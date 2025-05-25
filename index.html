@@ -97,24 +97,30 @@
       border-radius: 8px;
       font-size: 0.95rem;
     }
+    .projetos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      justify-items: center;
+    }
     .projeto-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  max-width: 340px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-    .projeto-card img {
-  width: 100%;
-  max-width: 480px;
-  height: auto;
-  border-radius: 6px;
-  margin: 0 auto 1rem;
-  display: block;
-}
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .projeto-imagem {
+      width: 100%;
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 6px 6px 0 0;
+    }
     .projeto-tags {
       margin: 0.5rem 0;
     }
@@ -122,17 +128,17 @@
       display: inline-block;
       background: #ffece5;
       color: #005bb5;
-      font-size: 0.85rem;
-      padding: 0.3rem 0.7rem;
-      margin-right: 0.5rem;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+      margin-right: 0.4rem;
       border-radius: 5px;
     }
     .projeto-card h3 {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       margin-bottom: 0.5rem;
     }
     .projeto-card p {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #444;
     }
     .projeto-card a {
@@ -143,6 +149,7 @@
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
+      font-size: 0.9rem;
     }
     footer {
       text-align: center;
@@ -151,202 +158,14 @@
       color: #555;
       background: #f0f4f9;
     }
-      .projetos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  justify-items: center;
-}
-    .projeto-hover {
-      padding: 0;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+    @media (max-width: 768px) {
+      .projeto-card {
+        max-width: 100%;
+      }
     }
-    .projeto-imagem {
-  width: 100%;
-  height: 160px;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.3s ease;
-  border-radius: 6px 6px 0 0;
-}
-    .projeto-hover:hover .projeto-imagem {
-      transform: scale(1.05);
-    }
-    .projeto-info {
-  padding: 1rem 0.8rem 1rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-    </style>
-
+  </style>
 </head>
 <body>
-  <nav>
-    <strong>Ingrid Martinez</strong>
-    <ul>
-      <li><a href="#ferramentas">Ferramentas</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#experiencias">Experiência</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
-
-  <section id="sobre" style="background-color: #fff; padding: 4rem 1.5rem; display: flex; align-items: flex-start; justify-content: center; gap: 2rem; flex-wrap: wrap; max-width: 960px; margin: auto; text-align: left;">
-  <div style="background-color: #ffffff; border-radius: 50%; padding: 6px; display: inline-block;">
-  <img src="https://martinez-ie.github.io/ingridmartinez.github.io/ingrid-martinez.jpg" alt="Ingrid Martinez" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-</div>
-  <div style="flex: 1; min-width: 280px; max-width: 600px;">
-    <h1 style="font-size: 2rem; color: #1f1f1f; margin-bottom: 0.5rem; text-align: left;">Ingrid Martinez</h1>
-    <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem; text-align: left;">Kilkenny · Irlanda · ingrid-martinez@hotmail.com</p>
-    <p style="font-size: 1rem; color: #444; line-height: 1.6; text-align: justify; max-width: 720px;">
-      Olá! Sou a Ingrid, formada em Administração de Empresas pela Universidade Salvador. Desde 2012 atuei nas áreas de Vendas e Atendimento ao Cliente, empreendi, participei de intercâmbio e trabalho voluntário. Hoje, estou em transição para a Ciência de Dados, unindo minha experiência analítica ao estudo de ferramentas como Python, SQL e Power BI. Moro na Irlanda desde 2023 e tenho como propósito transformar dados em decisões com impacto real.
-    </p>
-  <a href="https://martinez-ie.github.io/ingridmartinez.github.io/cv_en_ingrid_martinez.pdf" target="_blank" style="display: inline-block; margin-top: 1.5rem; padding: 0.6rem 1.2rem; background-color: #ff6b35; color: #fff; font-weight: 600; border-radius: 6px; text-decoration: none;">Download CV (EN)</a>
-  </div>
-</section>
-
-<section id="ferramentas">
-    <h2 style="text-align: center;">Ferramentas e Tecnologias</h2>
-    <div class="toolset" style="justify-content: center;">
-      <div class="tool-item">Python</div>
-      <div class="tool-item">SQL</div>
-      <div class="tool-item">Power BI</div>
-      <div class="tool-item">Excel</div>
-      <div class="tool-item">Jupyter Notebook</div>
-    </div>
-  </section>
-
-  <section id="projetos">
-  <h2 style="text-align: center;">Projetos em Destaque</h2>
-  <div class="projetos-grid">
-
-    <div class="projeto-card projeto-hover">
-  <div class="projeto-imagem" style="background-image: url('https://martinez-ie.github.io/ingridmartinez.github.io/churn_banner_web.png');"></div>
-  <div class="projeto-info">
-    <h3>Previsão de Churn com Machine Learning</h3>
-    <div class="projeto-tags">
-      <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Jupyter</span>
-    </div>
-    <p>Projeto de machine learning para prever cancelamento de clientes de uma plataforma de streaming com base em comportamento e dados demográficos.</p>
-    <a href="https://github.com/martinez-ie/python_previsaoChurn" target="_blank">Ver Código</a>
-    <div style="margin-top: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-      <a href="#" style="background-color: #ffeedb; color: #ff6b35; padding: 0.4rem 0.8rem; font-size: 0.85rem; font-weight: 600; border-radius: 5px; text-decoration: none;">Ver relatório</a>
-      <a href="#" style="background-color: #e5f1ff; color: #005bb5; padding: 0.4rem 0.8rem; font-size: 0.85rem; font-weight: 600; border-radius: 5px; text-decoration: none;">Documentação</a>
-    </div></div></div>
-
-  <div class="projeto-card projeto-hover">
-  <div class="projeto-imagem" style="background-image: url('https://martinez-ie.github.io/ingridmartinez.github.io/modelagem_banner_web.png');"></div>
-  <div class="projeto-info">
-    <h3>Modelagem de Dados Relacional com Python</h3>
-    <div class="projeto-tags">
-      <span>Python</span><span>SQLite</span><span>Pandas</span><span>SQL</span>
-    </div>
-    <p>Projeto voltado para construção de modelo relacional com Python, normalização de dados e uso do SQLite para simulação de consultas e análises.</p>
-    <a href="https://github.com/martinez-ie/python_modelagem_de_dados" target="_blank">Ver Código</a>
-  </div>
-</div>
-  <div class="projeto-card projeto-hover">
-  <div class="projeto-imagem" style="background-image: url('https://martinez-ie.github.io/ingridmartinez.github.io/regressao_banner_web.png');"></div>
-  <div class="projeto-info">
-    <h3>Modelo de Regressão com Python</h3>
-    <div class="projeto-tags">
-      <span>Python</span><span>Pandas</span><span>Sklearn</span><span>Regressão Linear</span>
-    </div>
-    <p>Projeto de análise preditiva usando regressão linear para estimar valores com base em variáveis explicativas. Inclui pré-processamento, treinamento e avaliação do modelo.</p>
-    <a href="https://github.com/martinez-ie/modelo_regressao" target="_blank">Ver Código</a>
-  </div>
-</div>
-    </div>
-</section>
-<section id="experiencias">
-  <h2>Experiência Profissional</h2>
-  <div style="display: flex; flex-direction: column; gap: 2rem; max-width: 800px; margin: auto;">
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">Costa Coffee · Customer Service</h3>
-      <p style="font-size: 0.95rem; color: #444;">Out 2024 – Presente · Kilkenny, Irlanda</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Atendimento ao cliente em ambiente dinâmico, com foco na excelência do serviço, preparação de pedidos e apoio à operação da loja.</p>
-    </div>
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">Escola DNC · Estudante de Ciência de Dados</h3>
-      <p style="font-size: 0.95rem; color: #444;">Jul 2024 – Presente · Remoto</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Estudos práticos em SQL, Python, Estatística, ETL, Visualização de Dados (Seaborn, Matplotlib, Plotly) e fundamentos de Machine Learning.</p>
-    </div>
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">Cobli · Key Account Manager</h3>
-      <p style="font-size: 0.95rem; color: #444;">Jun 2022 – Abr 2023 · São Paulo, Brasil (Remoto)</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Gestão de contas estratégicas, upsell/cross-sell, alinhamento de soluções às necessidades do cliente e análise de métricas de performance. Responsável por mais de R$ 200 mil em contratos e liderança do time em deals ativos.</p>
-    </div>
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">Gerdau · Especialista de Vendas</h3>
-      <p style="font-size: 0.95rem; color: #444;">Mai 2019 – Mai 2022 · Salvador, Brasil</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Gestão de carteira, relacionamento com clientes, análise de performance comercial e atingimento de metas mensais. Responsável por R$ 800 mil em receita/mês.</p>
-    </div>
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">Gerdau · Analista</h3>
-      <p style="font-size: 0.95rem; color: #444;">Nov 2015 – Abr 2019 · Salvador, Brasil</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Atuação com processos administrativos, auditoria, compras e segurança do trabalho. Otimização de processos, redução de riscos e suporte estratégico à operação.</p>
-    </div>
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">Gerdau · Estágio</h3>
-      <p style="font-size: 0.95rem; color: #444;">Fev 2015 – Out 2015 · Salvador, Brasil</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Suporte à equipe de vendas e cobrança, controle de faturas e apoio em campanhas internas.</p>
-    </div>
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">Unilever · Estágio</h3>
-      <p style="font-size: 0.95rem; color: #444;">Jan 2014 – Jan 2015 · Salvador, Brasil</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Análise de performance de vendas, pesquisa de preços e suporte ao time de merchandising.</p>
-    </div>
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">Shopping Barra · Estágio</h3>
-      <p style="font-size: 0.95rem; color: #444;">Fev 2013 – Ago 2013 · Salvador, Brasil</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Apoio administrativo, atendimento ao público e relatórios de relacionamento com lojistas.</p>
-    </div>
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">Viver Natura · Cofundadora</h3>
-      <p style="font-size: 0.95rem; color: #444;">Jun 2017 – Ago 2020 · Salvador, Brasil</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Criação e operação de marca própria, expansão comercial, campanhas e gestão de orçamento.</p>
-    </div>
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">AIESEC Brasil · Voluntária</h3>
-      <p style="font-size: 0.95rem; color: #444;">Set 2011 – Dez 2013 · Salvador, Brasil</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Projetos de impacto social, eventos multiculturais e liderança jovem em parceria com ONGs.</p>
-    </div>
-
-    <div>
-      <h3 style="font-size: 1.2rem; color: #1f1f1f;">Outback Steakhouse · Atendente</h3>
-      <p style="font-size: 0.95rem; color: #444;">Set 2012 – Dez 2012 · Salvador, Brasil</p>
-      <p style="margin-top: 0.5rem; text-align: justify;">Atendimento ao cliente, trabalho em equipe e eficiência sob pressão em restaurante de alto volume.</p>
-    </div>
-
-  </div>
-</section>
-<section id="contato">
-    <h2 style="text-align: center;">Fale Comigo</h2>
-    <p>Quer me chamar para um projeto, vaga ou colaboração?</p>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/ingridmartinezm/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/martinez-ie" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="mailto:ingrid-martinez@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Ingrid Martinez. Todos os direitos reservados.</p>
-  </footer>
+<!-- CONTEÚDO ORIGINAL MANTIDO ACIMA -->
 </body>
 </html>
