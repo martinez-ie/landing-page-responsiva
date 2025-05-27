@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingrid Martinez | Data Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; background-color: #f7fafd; color: #1f1f1f; line-height: 1.6; }
+    nav { background-color: #ffffff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav a { text-decoration: none; color: #1f1f1f; font-weight: 600; }
+    nav a:hover { color: #0073e6; }
+    header { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2rem; padding: 3rem 1rem 2rem; text-align: left; }
+    header img { width: 160px; border-radius: 12px; border: 4px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    header h1 { font-size: 2rem; margin-bottom: 1rem; }
+    header p { font-size: 1rem; color: #444; text-align: justify; max-width: 500px; }
+    section { max-width: 880px; margin: auto; padding: 2rem 1.5rem; }
+    h2 { font-size: 1.8rem; margin-bottom: 1.5rem; color: #ff6b35; text-align: center; }
+    .toolset { justify-content: center; display: flex; flex-wrap: wrap; gap: 1rem; }
+    .tool-item { background: #ffece5; color: #005bb5; font-weight: 600; padding: 0.6rem 1rem; border-radius: 8px; font-size: 0.95rem; }
+    .projetos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; justify-items: center; }
+    .projeto-card { background: #fff; border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); width: 100%; max-width: 320px; display: flex; flex-direction: column; justify-content: space-between; }
+    .projeto-imagem { width: 100%; height: 160px; background-size: cover; background-position: center; border-radius: 6px 6px 0 0; }
+    .projeto-tags { margin: 0.5rem 0; }
+    .projeto-tags span { display: inline-block; background: #ffece5; color: #005bb5; font-size: 0.75rem; padding: 0.3rem 0.6rem; margin-right: 0.4rem; border-radius: 5px; }
+    .projeto-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .projeto-card p { font-size: 0.9rem; color: #444; }
+    .projeto-card a { display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #005bb5; color: #fff; border-radius: 5px; text-decoration: none; font-size: 0.9rem; }
+    footer { text-align: center; font-size: 0.9rem; padding: 2rem; color: #555; background: #f0f4f9; }
+  </style>
+</head>
+<body>
+  
+    <button onclick="window.location.href='index.html'" style="background:#0073e6;color:#fff;padding:0.4rem 1rem;border:none;border-radius:5px;cursor:pointer;font-size:0.9rem;">Versão em Português</button>
+    <ul>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <header>
+    <img src="https://martinez-ie.github.io/ingridmartinez.github.io/ingrid-martinez.jpg" alt="Ingrid Martinez">
+    <div>
+      <h1>Hello! I'm Ingrid</h1>
+      <p>Graduated in Business Administration at Universidade Salvador, I’ve built over 10 years of experience in Sales and Customer Service. Currently transitioning into Data Science, applying skills in Python, SQL and Power BI to turn data into real insights. I’ve been living in Ireland since 2023, where I continue to grow professionally, driven by curiosity, purpose, and a passion for technology.</p>
+    </div>
+  </header>
+
+  <section id="tools">
+    <h2>Tools & Technologies</h2>
+    <div class="toolset">
+      <div class="tool-item">Python</div>
+      <div class="tool-item">SQL</div>
+      <div class="tool-item">Power BI</div>
+      <div class="tool-item">Excel</div>
+      <div class="tool-item">Jupyter</div>
+      <div class="tool-item">GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projetos-grid">
+      <div class="projeto-card">
+        <div class="projeto-imagem" style="background-image: url('https://martinez-ie.github.io/landing-page-responsiva/churn.png');"></div>
+        <div class="projeto-info">
+          <h3>Churn Prediction</h3>
+          <div class="projeto-tags">
+            <span>Python</span><span>ML</span><span>Pandas</span>
+          </div>
+          <p>Classification model to predict customer churn on a streaming platform.</p>
+          <a href="https://github.com/martinez-ie/python_previsaoChurn" target="_blank">View project</a>
+        </div>
+      </div>
+
+      <div class="projeto-card">
+        <div class="projeto-imagem" style="background-image: url('https://martinez-ie.github.io/landing-page-responsiva/modelagem.png');"></div>
+        <div class="projeto-info">
+          <h3>Data Modelling</h3>
+          <div class="projeto-tags">
+            <span>SQL</span><span>Modelling</span>
+          </div>
+          <p>Hands-on data modelling exercises and relational structure design using PostgreSQL.</p>
+          <a href="https://github.com/martinez-ie/python_modelagem_de_dados" target="_blank">View project</a>
+        </div>
+      </div>
+
+      <div class="projeto-card">
+        <div class="projeto-imagem" style="background-image: url('https://martinez-ie.github.io/landing-page-responsiva/regressao.png');"></div>
+        <div class="projeto-info">
+          <h3>Regression Model</h3>
+          <div class="projeto-tags">
+            <span>Regression</span><span>Python</span><span>EDA</span>
+          </div>
+          <p>Linear regression project to predict housing prices based on numeric variables.</p>
+          <a href="https://github.com/martinez-ie/modelo_regressao" target="_blank">View project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <div style="display: flex; flex-direction: column; gap: 2rem; max-width: 880px; margin: auto;">
+      <div>
+        <h3 style="font-size: 1.2rem; color: #1f1f1f;">Costa Coffee · Customer Service</h3>
+        <p style="font-size: 0.95rem; color: #444;">Oct 2024 – Present · Kilkenny, Ireland</p>
+        <p style="margin-top: 0.5rem; text-align: justify;">Customer service in a fast-paced environment, order preparation, and support for store operations.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; color: #1f1f1f;">Escola DNC · Data Science Student</h3>
+        <p style="font-size: 0.95rem; color: #444;">Jul 2024 – Present · Remote</p>
+        <p style="margin-top: 0.5rem; text-align: justify;">Practical training in SQL, Python, Statistics, ETL, Data Visualization (Seaborn, Matplotlib, Plotly), and basic Machine Learning.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; color: #1f1f1f;">Cobli · Key Account Manager</h3>
+        <p style="font-size: 0.95rem; color: #444;">Jun 2022 – Apr 2023 · São Paulo, Brazil (Remote)</p>
+        <p style="margin-top: 0.5rem; text-align: justify;">Managed strategic accounts, upselling and cross-selling, aligned solutions to client needs, and analyzed performance metrics. Closed over R$200K in contracts and led the team in active deals.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; color: #1f1f1f;">Gerdau · Sales Specialist</h3>
+        <p style="font-size: 0.95rem; color: #444;">May 2019 – May 2022 · Salvador, Brazil</p>
+        <p style="margin-top: 0.5rem; text-align: justify;">Managed portfolio, customer relationships, sales performance analysis, and target achievement. Responsible for R$800K in monthly revenue.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; color: #1f1f1f;">Gerdau · Analyst</h3>
+        <p style="font-size: 0.95rem; color: #444;">Nov 2015 – Apr 2019 · Salvador, Brazil</p>
+        <p style="margin-top: 0.5rem; text-align: justify;">Administrative operations, audits, procurement, and EHS. Process optimization and strategic support for operational teams.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; color: #1f1f1f;">Unilever · Intern</h3>
+        <p style="font-size: 0.95rem; color: #444;">Jan 2014 – Jan 2015 · Salvador, Brazil</p>
+        <p style="margin-top: 0.5rem; text-align: justify;">Sales performance analysis, pricing research, and support for merchandising and product monitoring.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; color: #1f1f1f;">Shopping Barra · Intern</h3>
+        <p style="font-size: 0.95rem; color: #444;">Feb 2013 – Aug 2013 · Salvador, Brazil</p>
+        <p style="margin-top: 0.5rem; text-align: justify;">Administrative support, customer service, and coordination with store owners.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; color: #1f1f1f;">Viver Natura · Co-Founder</h3>
+        <p style="font-size: 0.95rem; color: #444;">Jun 2017 – Aug 2020 · Salvador, Brazil</p>
+        <p style="margin-top: 0.5rem; text-align: justify;">Created and managed a natural products brand, commercial expansion, marketing campaigns, and financial planning.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; color: #1f1f1f;">AIESEC Brazil · Volunteer</h3>
+        <p style="font-size: 0.95rem; color: #444;">Sep 2011 – Dec 2013 · Salvador, Brazil</p>
+        <p style="margin-top: 0.5rem; text-align: justify;">Social impact projects, multicultural events, and youth leadership in partnership with NGOs.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; color: #1f1f1f;">Outback Steakhouse · Waitress</h3>
+        <p style="font-size: 0.95rem; color: #444;">Sep 2012 – Dec 2012 · Salvador, Brazil</p>
+        <p style="margin-top: 0.5rem; text-align: justify;">Customer service, teamwork, and operational agility in a high-volume restaurant.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div style="position: fixed; top: 50%; left: 0; transform: translateY(-50%); display: flex; flex-direction: column; gap: 1rem; padding: 1rem;">
+      <a href="mailto:ingrid-martinez@hotmail.com" target="_blank" style="font-size: 1rem; color: #1f1f1f;"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/ingridmartinezm" target="_blank" style="font-size: 1rem; color: #1f1f1f;"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/martinez-ie" target="_blank" style="font-size: 1rem; color: #1f1f1f;"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ingrid Martinez. All rights reserved.</p>
+  </footer>
+</body>
+</html>
